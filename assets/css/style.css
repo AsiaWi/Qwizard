@@ -17,6 +17,11 @@ a > h1 {
 a {
     text-decoration: none;
 }
+
+#favicon {
+    display: none;
+}
+
 body {
     margin: 0% auto;
     background-image: url(../images/background.webp);
@@ -46,6 +51,10 @@ body {
     position: relative;
     top: 10px;
 }
+#question {
+    text-align: justify;
+    padding: 4px;
+}
 #answer-area {
    padding: 0 2.5% 0 6%;
     margin: 40px auto 0;
@@ -56,6 +65,7 @@ body {
     position: relative;
     margin: 5px;
     border-radius: 10px;
+    text-align: justify;
 }
 #navigation-area {
     margin: 10%;
@@ -65,4 +75,10 @@ body {
     text-align: center;
     height: 50px;
     width: 
+} 
+
+@media screen and (min-width: 410px) {
+    #favicon {
+        display: inline;
+    }
 }
