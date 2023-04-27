@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A quiz website helping you work on your quick, logical thinking and test your listening skills">
-    <meta name="keywords" content="quiz, test, listening skills, logical thinking, quick thinking, smart, fast learner ">
+    <meta name="description"
+        content="A quiz website helping you work on your quick, logical thinking and test your listening skills">
+    <meta name="keywords"
+        content="quiz, test, listening skills, logical thinking, quick thinking, smart, fast learner ">
     <!-- css stylesheet link -->
     <link href="assets/css/style.css" rel="stylesheet">
     <title>Too Slow!</title>
 </head>
+
 <body>
     <nav>
-        <a href="index.html"><h1>Too Slow!</h1></a>
+        <a href="index.html">
+            <h1>Too Slow!</h1>
+        </a>
     </nav>
-    <div>Main game content
-    <span>Question area</span>
-    <button>answer1</button>
-    <button>answer2</button>
-    <button>answer3</button>
-    </div>
-    <div>
-        <span>correct answer</span>
-        <span>Incorrect answer</span>
-        <button>Next question</button>
+    <div id="main-game-area">
+        <div id="question-area">
+            <p>Question area</p>
+            <button class="btn-1">answer1</button>
+            <button class="btn-2">answer2</button>
+            <button class="btn-3">answer3</button>
+        </div>
+        <div class="nav-area">
+            <button>Start quizz</button>
+            <button>Next question</button>
+            <button>Reset quizz</button>
+        </div>
     </div>
     <script src="assets/js/script.js"></script>
     <noscript>Sorry your browser does not support JavaScript!</noscript>
 </body>
+
 </html>
