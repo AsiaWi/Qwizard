@@ -47,12 +47,15 @@ body {
     top: 10px;
 }
 #answer-area {
-    margin-top: 40px;
+    /*margin-top: 40px;*/
+   padding: 0 2.5% 0 6%;
+    margin: 40px auto 0;
 }
 .btn {
     width: 95%;
     height: 100px;
     position: relative;
+   
     margin: 5px;
     border-radius: 10px;
 }
