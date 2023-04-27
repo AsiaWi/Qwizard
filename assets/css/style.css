@@ -29,3 +29,30 @@ body {
     height: 150vh;
    
 }
+
+#main-game-area {
+    background-color: black;
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+#question-area {
+    background-color: white;
+    width: 85%;
+    height: 15%;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+}
+#answer-area {
+    margin-top: 40px;
+}
+.btn {
+    width: 95%;
+    height: 100px;
+    position: relative;
+    margin: 5px;
+    border-radius: 10px;
+}
