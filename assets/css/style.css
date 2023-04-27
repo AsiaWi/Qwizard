@@ -17,45 +17,52 @@ a > h1 {
 a {
     text-decoration: none;
 }
-
 body {
-    margin: 0 auto;
+    margin: 0% auto;
     background-image: url(../images/background.webp);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
     position: relative;
+    top: 20%;
     background-position: bottom 70% right 50%;
     width: 100%;
-    height: 150vh;
+    height: 100%;
    
 }
 
 #main-game-area {
     background-color: black;
     width: 60%;
-    height: 80%;
+    height: 40%;
     margin: 0 auto;
     border-radius: 10px;
 }
 #question-area {
     background-color: white;
     width: 85%;
-    height: 15%;
+    height: 100px;
     margin: 0 auto;
     border-radius: 10px;
     position: relative;
     top: 10px;
 }
 #answer-area {
-    /*margin-top: 40px;*/
    padding: 0 2.5% 0 6%;
     margin: 40px auto 0;
 }
 .btn {
     width: 95%;
-    height: 100px;
+    height: 50px;
     position: relative;
-   
     margin: 5px;
     border-radius: 10px;
+}
+#navigation-area {
+    margin: 10%;
+}
+.btn-nav {
+    margin: 0 7%;
+    text-align: center;
+    height: 50px;
+    width: 
 }
