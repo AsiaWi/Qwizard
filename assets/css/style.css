@@ -47,7 +47,7 @@ body {
 
 #main-game-area {
     background-color: rgb(79, 72, 72);
-    width: 60%;
+    width: 90%;
     height: 40%;
     margin: 0 auto;
     border-radius: 10px;
@@ -115,4 +115,10 @@ body {
     #favicon {
         display: inline;
     }
+}
+
+@media screen and (min-width: 820px) {
+#main-game-area {
+    width: 70%;
+}
 }
