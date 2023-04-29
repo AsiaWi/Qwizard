@@ -127,13 +127,22 @@ let questions = [
 let questionHeader = document.getElementById('question-header');
 let currentQuestionIndex = 0;
 let answerArea = document.getElementById('answer-area');
-let score = 0;
+let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
 
+// list of functions
+
+/**
+ * Main function called when script is fully loaded 
+ */
 function runGame() {
-  
+  let currentQuestionIndex = 0;
+  let totalScore = 0;
+  nextQuestion.innerHTML = 'NEXT';
+  showQuestion();
+  showTimer();
 
 }
 
