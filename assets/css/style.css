@@ -82,10 +82,10 @@ body {
     text-align: justify;
     cursor: pointer;
 }
-.btn-answer:hover:not([disabled]) {
+.btn-answer:hover:not([disabled]){
     background-color: antiquewhite;
 }
-.btn-answer:disabled {
+.btn-answer:disabled{
     cursor: none;
 }
 
