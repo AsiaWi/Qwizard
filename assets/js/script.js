@@ -355,7 +355,9 @@ function showQuestion() {
   showAnswers();
   currentQuestionIndex++;
 }
-
+/**
+ * Function shuffling and picking random questions
+ */
 function pickRandomQuestion() {
   currentQuestionIndex++;
   let randomNumber = Math.floor(Math.random() * questions.length);
@@ -374,12 +376,11 @@ function pickRandomQuestion() {
       Index = randomNumber;
       showQuestion();
     }
-    //add the question to list of answered questions
     answeredQuestions.push(randomNumber);
   }
 
 }
-
+//Event listener for next button to go to next question
 nextQuestion.addEventListener('click', () => {
   if (answeredQuestions.length < 10) {
     pickRandomQuestion();
