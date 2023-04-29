@@ -1,4 +1,6 @@
- 
+console.log('nonono');
+
+
 let questions = [
     {question:'What goes up and down but can\'t move?',
      answers: [ 
@@ -7,7 +9,7 @@ let questions = [
                             {text: 'Age' ,correct: false },
                             ]
      },
-     {question: 'What\’s something that can be broken but never held?',
+     {question: 'What’s something that can be broken but never held?',
       answers: [            {text: ' Trust' ,correct: false},
                             {text: ' A promise' ,correct: true},
                             {text: 'A glass' ,correct: false },
@@ -73,7 +75,7 @@ let questions = [
                             {text: '37' ,correct: false },
                             ]
      },
-     {question: 'What is something that you can catch that isn\’t thrown?',
+     {question: 'What is something that you can catch that isn’t thrown?',
       answers: [            {text: 'A ball' ,correct: false },
                             {text: 'A slipper' ,correct: false },
                              {text: 'A cold' ,correct: true },
@@ -97,13 +99,13 @@ let questions = [
                              {text: ' A bed' ,correct: true },
                             ]
      },
-     {question:' I\’m light as a feather, but not even the strongest girl can hold me for more than 5 minutes. What am I?' ,
+     {question:' I’m light as a feather, but not even the strongest girl can hold me for more than 5 minutes. What am I?' ,
        answers: [           {text: 'A parrot' ,correct: false},
                             {text: 'Breath' ,correct: true},
                              {text: 'A mouse' ,correct: false},
                             ]
      },
-     {question: 'What has one eye but can\’t see anything at all?',
+     {question: 'What has one eye but can’t see anything at all?',
       answers: [            {text: ' A needle' ,correct: true },
                             {text: 'A snake' ,correct: false },
                              {text: ' A bat',correct: false},
@@ -115,7 +117,7 @@ let questions = [
                              {text: ' A clock',correct: true },
                             ]
      },
-     {question: 'I\’m so fragile that if you say my name, you\’ll break me. What am I?',
+     {question: 'I’m so fragile that if you say my name, you\’ll break me. What am I?',
        answers: [           {text: ' A promise' ,correct: false },
                             {text: ' An oath'  ,correct: false },
                              {text: ' Silennce' ,correct: true},
@@ -123,32 +125,32 @@ let questions = [
      },   
      
 ];
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- function runGame() {
+
+function runGame() {
 
 }
 
 function showQuestion() {
 }
 
-function checkCorrectAnswer(){
+function showAnswers(){
 
 }
-function incrementCorrectAnswer(){
+
+function selectAndcheckCorrectAnswer(){
+
+}
+function incrementCorrectAnswerCount(){
 
 } 
-function incrementWrongAnswer(){
+function incrementWrongAnswerCount(){
 
 } 
+
+function showTotalScore(){
+  
+}
 function showTimer(){
 
 }
+

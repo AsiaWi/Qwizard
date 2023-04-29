@@ -80,6 +80,20 @@ body {
     margin: 5px;
     border-radius: 10px;
     text-align: justify;
+    cursor: pointer;
+}
+.btn-answer:hover:not([disabled]) {
+    background-color: antiquewhite;
+}
+.btn-answer:disabled {
+    cursor: none;
+}
+
+.correct-answer {
+    background-color: #00ffff;
+}
+.incorrect-answer {
+    background-color: red;
 }
 
 #navigation-area {
