@@ -1,6 +1,4 @@
-console.log('nonono');
-
-
+// Variable holding all quiz questions
 let questions = [
     {question:'What goes up and down but can\'t move?',
      answers: [ 
@@ -125,8 +123,17 @@ let questions = [
      },   
      
 ];
+// Global variables, list
+let questionHeader = document.getElementById('question-header');
+let currentQuestionIndex = 0;
+let answerArea = document.getElementById('answer-area');
+let score = 0;
+let nextQuestion = document.getElementById('next-btn');
+let sec = 0;
+let time = setInterval(showTimer, 1000);
 
 function runGame() {
+  
 
 }
 
@@ -148,7 +155,7 @@ function incrementWrongAnswerCount(){
 } 
 
 function showTotalScore(){
-  
+
 }
 function showTimer(){
 
