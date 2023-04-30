@@ -327,8 +327,8 @@ let currentQuestionIndex = 0;
 let answerArea = document.getElementById('answer-area');
 let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
-//let sec = 0;
-//let time = setInterval(showTimer, 1000);
+let sec = 0;
+let time = setInterval(showTimer, 1000);
 //let answeredQuestions = [];
 //let index;
 
@@ -470,14 +470,19 @@ function incrementWrongAnswerCount() {
 
 function showTotalScore() {
   initialState();
-  questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length}!`;
+  questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
 }
 
 
 function showTimer() {
-       
-}
+  document.getElementById('timer').innerHTML = sec;
+  if (currentQuestionIndex < questions.length){
+    sec++;
+  } else {
+    clearInterval(time);
+  }
+  }
 
 runGame();
