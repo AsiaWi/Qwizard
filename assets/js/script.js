@@ -327,10 +327,10 @@ let currentQuestionIndex = 0;
 let answerArea = document.getElementById('answer-area');
 let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
-let sec = 0;
-let time = setInterval(showTimer, 1000);
-let answeredQuestions = [];
-let index;
+//let sec = 0;
+//let time = setInterval(showTimer, 1000);
+//let answeredQuestions = [];
+//let index;
 
 // list of functions
 
@@ -338,26 +338,28 @@ let index;
 * Main function called when script is fully loaded 
 */
 function runGame() {
-let currentQuestionIndex = 0;
-let totalScore = 0;
+ currentQuestionIndex = 0;
+ totalScore = 0;
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
-showTimer();
 
 }
 /**
 * Function showing question and question number in header/ question area 
 */
 function showQuestion() {
+  initialState();
 let currentQuestion = questions[currentQuestionIndex];
 let questionNumber = currentQuestionIndex + 1;
 questionHeader.textContent = `${questionNumber}.${currentQuestion.question}`;
 showAnswers();
-currentQuestionIndex++;
 }
+
 /**
 * Function shuffling and picking random questions
 */
+
+/*
 function pickRandomQuestion() {
 currentQuestionIndex++;
 let randomNumber = Math.floor(Math.random() * questions.length);
@@ -380,10 +382,22 @@ if (answeredQuestions.length === 10) {
 }
 
 }
+
+
+*/
+
+function handleNextQuestion(){
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length){
+    showQuestion();
+  } else {
+    showTotalScore();
+  }
+}
 //Event listener for next button to go to next question
 nextQuestion.addEventListener('click', () => {
-if (answeredQuestions.length < 10) {
-  pickRandomQuestion();
+if (currentQuestionIndex < questions.length) {
+  handleNextQuestion();
 } else {
   runGame();
 }
@@ -401,11 +415,11 @@ function initialState(){
 }
 
 /**
- * Function to show answers from question object property
+ * Function to show answers against each question/ = showing answer's first property(text) values
  * add a button for each answer to be displayed
+ * collecting dataset from the value of second property(correct)
  */
 function showAnswers() {
-  initialState();
     let currentQuestion = questions[currentQuestionIndex];
      currentQuestion.answers.forEach(answer => {
           let answerButton = document.createElement('button');
@@ -420,19 +434,24 @@ function showAnswers() {
       }); 
     }
 
-  
+  /**
+   * 
+   * Function validating if the answer clicked by user is correct or not
+   * Then adding classes to show correct/incorrect answer
+   * Then answer buttons disabled to not allow choosing second
+   */
     function selectAndCheckAnswer(event){
       let selectedAnswer = event.target;
       let correctAnswer = selectedAnswer.dataset.correct === 'true';
       if (correctAnswer) {
         selectedAnswer.classList.add('correct-answer');
-        score++;
+        totalScore++;
       } else {
         selectedAnswer.classList.add('incorrect-answer');
       } 
       Array.from(answerArea.children).forEach(button => {
-        if (answerButton.dataset.correct === 'true') {
-          answerButton.classList.add('correct-answer');
+        if (button.dataset.correct === 'true') {
+          button.classList.add('correct-answer');
         }
         button.disabled = true;
       });
@@ -450,11 +469,15 @@ function incrementWrongAnswerCount() {
 }
 
 function showTotalScore() {
-
+  initialState();
+  questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length}!`;
+  nextQuestion.innerHTML = 'Try again!';
+  nextQuestion.style.display ='block';
 }
 
-function showTimer() {
 
+function showTimer() {
+       
 }
 
 runGame();
