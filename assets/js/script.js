@@ -1,3 +1,9 @@
+function username() {
+  let username = document.getElementById("username").value;
+  document.getElementById("name").innerHTML = username;
+}
+
+
 // Variable holding all quiz questions
 let questions = [{
   question: 'What goes up and down but can\'t move?',
@@ -47,6 +53,7 @@ let questions = [{
     },
   ]
 },
+/*
 {
   question: 'If two\’s company and three’s a crowd, what do four and five make?',
   answers: [{
@@ -317,8 +324,9 @@ let questions = [{
       text: ' Silennce',
       correct: true
     },
-  ]
-},
+    
+  ] 
+},*/
 
 ];
 // Global variables, list
@@ -343,6 +351,7 @@ function runGame() {
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
 
+
 }
 /**
 * Function showing question and question number in header/ question area 
@@ -353,6 +362,7 @@ let currentQuestion = questions[currentQuestionIndex];
 let questionNumber = currentQuestionIndex + 1;
 questionHeader.textContent = `${questionNumber}.${currentQuestion.question}`;
 showAnswers();
+showTimer();// fix the timer
 }
 
 /**
@@ -382,10 +392,7 @@ if (answeredQuestions.length === 10) {
 }
 
 }
-
-
 */
-
 function handleNextQuestion(){
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length){
@@ -467,15 +474,22 @@ function incrementCorrectAnswerCount() {
 function incrementWrongAnswerCount() {
 
 }
-
+/**
+ * Function to show a total score and total time taken to take the quiz
+ * then an option to try again is provided
+ */
 function showTotalScore() {
   initialState();
   questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
+  sec = 0;
 }
 
-
+/**
+ * A function to show and run timer 
+ * for the player to see how long it took to take the quiz
+ */
 function showTimer() {
   document.getElementById('timer').innerHTML = sec;
   if (currentQuestionIndex < questions.length){
