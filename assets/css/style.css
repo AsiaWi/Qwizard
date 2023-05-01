@@ -166,25 +166,38 @@ body {
 
 
 #score-area {
-    padding: 0 20% 0 20%;
+    padding: 0 20% 0 23%;
     margin: 0 auto;
 }
 
 #score-area p {
-    display: inline-block;
     color: white;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 0 5px 0 25px;
-
+    display: flex;
+    justify-content: center;
 }
+   
 
-#score-area p~p {
-    padding-left: 10%;
-}
 
 @media screen and (min-width: 410px) {
     #icon {
         display: inline;
     }
+}
+
+@media screen and (min-width: 680px) {
+    #score-area p {
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+    #wrong-answer {
+        padding-left: 10%;
+    }
+   
+}
+
+@media screen and (min-width: 930px) {
+    #wrong-answer {
+        padding-left: 35%;
 }

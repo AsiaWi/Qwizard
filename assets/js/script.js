@@ -482,9 +482,11 @@ function showAnswers() {
       let correctAnswer = selectedAnswer.dataset.correct === 'true';
       if (correctAnswer) {
         selectedAnswer.classList.add('correct-answer');
+        incrementCorrectAnswerCount();
         totalScore++;
       } else {
         selectedAnswer.classList.add('incorrect-answer');
+        incrementWrongAnswerCount();
       } 
       Array.from(answerArea.children).forEach(button => {
         if (button.dataset.correct === 'true') {
@@ -494,15 +496,22 @@ function showAnswers() {
       });
   
       nextQuestion.style.display= 'block';
-  
     }
-
-function incrementCorrectAnswerCount() {
-
+/**
+ * Function showing the number of correctly answered questions to the user
+ * during the quiz duration
+ */
+function incrementCorrectAnswerCount(){
+    let correctScore= parseInt(document.getElementById('add-correct-score').innerHTML);
+    document.getElementById('add-correct-score').innerHTML = ++correctScore;
 }
-
+/**
+ * function showing the number of incorrectly answered questions to the user
+ * during quiz duration
+ */
 function incrementWrongAnswerCount() {
-
+  let incorrectScore= parseInt(document.getElementById('add-incorrect-score').innerHTML);
+  document.getElementById('add-incorrect-score').innerHTML = ++incorrectScore;
 }
 /**
  * Function to show a total score and total time taken to take the quiz
@@ -510,9 +519,11 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
-  questionHeader.innerHTML = ` you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
+  questionHeader.innerHTML = ` You answered correctly ${totalScore} out of ${questions.length}questions in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
+  document.getElementById('add-correct-score').innerHTML = 0;
+  document.getElementById('add-incorrect-score').innerHTML = 0;
   sec = 0;
 }
 
