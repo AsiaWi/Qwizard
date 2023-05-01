@@ -1,25 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 #main-container {
+    margin: 5% 10%;
     background-color: rgb(186, 179, 236);
-    position: relative;
     max-width: 100%;
-    height: 100vh;
-    margin: 0 10%;
+    height: fit-content;
     border-radius: 10px;
 }
 #welcome-header {
+    padding-top: 30px;
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     border-bottom: dashed white 2px ;
 }
-/*username*/
+#instructions-container{
+    border: solid white 2px;
+    height:fit-content;
+    width: 90%;
+    display:block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.7);
 
- #id {
-    color:  red;
+}
+.instructions {
+    padding: 10px;
+}
+
+
+#form-container {
+    margin: 10px;
+}
+
+ #username{
+    background-color: rgba(245, 245, 245, 0.7);
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height:50px;
+    border: solid white 2px;
+    border-radius: 10px;
+ }
+ #start-quiz {
+    display: none;
+    
+ }
+
+ .user-btn {
+    display: block;
+    margin: 0 auto;
+    border: solid white 2px;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    margin-top: 10px;
+
+
  }
 /* nav area */
 nav {
-    background-color: rgb(79, 72, 72);
+    background-color:  rgb(186, 179, 236);
     margin: 0;
     padding: 0;
     height: 100px;
@@ -63,7 +102,7 @@ body {
 }
 
 #main-game-area {
-    background-color: rgb(79, 72, 72);
+    background-color:  rgb(186, 179, 236);
     width: 90%;
     height: 40%;
     margin: 0 auto;

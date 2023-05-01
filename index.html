@@ -17,28 +17,31 @@
 </head>
 
 <body>
-    <nav>
-        <span id="timer">0</span>
-        <a href="instructions.html">
-            <h1>Qwizard<i class="fa-solid fa-hourglass-end" id="favicon"></i></h1>
-        </a>
-    </nav>
-    <div id="main-game-area">
-        <div id="question-area">
-            <h2 id="question-header">1.Question</h2>
+    <div id="main-container">
+        <div>
+           <h1 id="welcome-header">Welcome to Qwizard<br>
+            <span id="name"></span></h1>
         </div>
-        <div id="answer-area">
-        </div>
-        <div id="navigation-area">
-            <button class="btn-nav" id="next-btn">Next question</button>
-        </div>
-        <div id="score-area">
-            <p id="correct-answers">Correct Answers:<span>0</span></p>
-            <p id="incorrect-answers">Incorrect Answers:<span>0</span></p>
-        </div>
+    <div id="instructions-container">
+        <p class="instructions"> Test your quick, logic thinking and your reading skills! The aim of the quiz is to answer 10 simple but tricky questions in short space of time.</p>
+        <ul>
+            <li>You can only choose one answer  </li>
+            <li> Once chosen click 'NEXT' to go to next question</li>
+            <li>Enter your name below</li>
+            <li>The timer starts as soon as you click 'START"</li>
+            <li>So.. when you ready!</li>
+            
+        </ul>
     </div>
+    <div id="form-container">
+    <form method="POST">
+        <input type="text" id="username" placeholder="Type your name here!">
+    </form>
+    <button id="submit-username" onclick = "username()" class="user-btn">SUBMIT</button>
+    <button id="start-quiz"class="user-btn"><a href="quiz.html" aria-label="Start quiz!">START!</a></button>
+    </div>
+    <div>
     <script src="assets/js/script.js"></script>
-   
 </body>
 
 </html>

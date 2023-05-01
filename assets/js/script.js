@@ -1,6 +1,8 @@
 function username() {
   let username = document.getElementById("username").value;
-  document.getElementById("name").innerHTML = username;
+  document.getElementById("name").innerHTML = `${username}! Are you the quiz wizard?`;
+  let startQuiz = document.getElementById('start-quiz');
+  startQuiz.style.display = 'block';
 }
 
 
@@ -337,6 +339,7 @@ let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
+
 //let answeredQuestions = [];
 //let index;
 
@@ -480,6 +483,7 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
+  let username = document.getElementById("username").value;
   questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
