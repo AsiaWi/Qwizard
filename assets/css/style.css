@@ -101,10 +101,7 @@ body {
     margin: 0% auto;
     background-image: url(../images/background.webp);
     background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    width: 100%;
-    height: 150vh;
+    background-repeat: repeat-y;
     font-family: 'Montserrat', sans-serif;
 }
 /*#main-game-area {
@@ -155,10 +152,10 @@ body {
 }
 
 .correct-answer {
-    background-color:rgba(124, 228, 170, 0.7);
+    background-color: #9fe2bf;
 }
 .incorrect-answer {
-    background-color: rgba(221, 197, 197, 0.7);
+    background-color: #ff721e;
 }
 
 #navigation-area {
