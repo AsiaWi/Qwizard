@@ -6,43 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="A quiz website helping you work on your quick, logical thinking and test your listening skills">
+        content="A quiz website helping you work on your quick, logical thinking and test your reading skills">
     <meta name="keywords"
-        content="quiz, test, listening skills, logical thinking, quick thinking, smart, fast learner ">
+        content="quiz, test, listening and reading skills, logical thinking, quick thinking, smart, fast learner ">
     <!-- css stylesheet link -->
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- font awesome link -->
     <script src="https://kit.fontawesome.com/e9449ce373.js" crossorigin="anonymous"></script>
+    <!-- favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
     <title>Qwizard</title>
 </head>
 
 <body>
     <div class="main-container">
         <div>
-           <h1 id="welcome-header">Welcome to Qwizard<br>
-            <span id="name"></span></h1>
+            <h1 id="welcome-header">Welcome to Qwizard<br>
+                <span id="name"></span></h1>
         </div>
-    <div id="instructions-container">
-        <h2 class="instructions">Instructions:</h2>
-        <p class="instructions"> Test your quick, logic thinking and your reading skills!
-            <br> The aim of the quiz is to answer 10 simple but tricky questions in short space of time.</p>
-        <ul>
-            <li>You can only choose one answer  </li>
-            <li> Once chosen click 'NEXT' to go to next question</li>
-            <li>Enter your name below</li>
-            <li>The timer starts as soon as you click 'START"</li>
-            <li>So.. when you ready!</li>
-            
-        </ul>
-    </div>
-    <div id="form-container">
-    <form method="POST">
-        <input type="text" id="username" placeholder="Type your name here!" required>
-    </form>
-    <button id="submit-username" onclick = "username()" class="user-btn">SUBMIT</button>
-    <button id="start-quiz"class="user-btn"><a href="quiz.html" aria-label="Start quiz!">START!</a></button>
-    </div>
-    <script src="assets/js/script.js"></script>
+        <div id="instructions-container">
+            <h2 class="instructions">Instructions:</h2>
+            <p class="instructions"> Test your quick, logical thinking and your reading skills!
+                <br> The aim of the quiz is to answer 10 simple but tricky questions, as quick as you can!</p>
+            <ul>
+                <li>You can only select one answer </li>
+                <li>Once selected, click 'NEXT' to go to next question</li>
+                <li>Enter your name below</li>
+                <li>The timer starts as soon as you click 'START"</li>
+                <li>So... when you ready!</li>
+            </ul>
+        </div>
+        <div id="form-container">
+            <form method="POST">
+                <input type="text" id="username" placeholder="Type your name here!" required>
+            </form>
+            <button id="submit-username" onclick="username()" class="user-btn">SUBMIT</button>
+            <button id="start-quiz" class="user-btn">
+                <a href="quiz.html" aria-label="Start quiz!">START!</a></button>
+        </div>
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>

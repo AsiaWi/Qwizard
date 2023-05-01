@@ -76,7 +76,7 @@
     width: 150px;
     padding: 10px;
     background-color: black;
-    border: solid black 2px;
+    border: dashed white 3px;
     border-radius: 50%;
 }
 
@@ -93,7 +93,7 @@ a {
     text-decoration: none;
 }
 
-#favicon {
+#icon {
     display: none;
 }
 
@@ -125,7 +125,9 @@ body {
     position: relative;
     top: 10px;
 }
-
+#question-header {
+    padding-top: 10px;
+}
 #question {
     text-align: justify;
     padding: 4px;
@@ -146,7 +148,8 @@ body {
     cursor: pointer;
 }
 .btn-answer:hover:not([disabled]){
-    background-color: antiquewhite;
+    border: outset rgba(245, 245, 245, 0.7) 10px;
+
 }
 .btn-answer:disabled{
     cursor: none;
@@ -183,7 +186,7 @@ body {
 }
 
 @media screen and (min-width: 410px) {
-    #favicon {
+    #icon {
         display: inline;
     }
 }

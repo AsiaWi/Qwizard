@@ -355,6 +355,7 @@ function username() {
   let instructions = document.getElementById('instructions-container');
   instructions.style.display = 'none';
   //document.getElementById("quiz-header").innerHTML = `Good luck with Qwizard <br>${username}!`;
+  //push method? create new array as global and push username in?
   }
 }
 /**
@@ -368,7 +369,7 @@ function showTimer() {
   } else {
     clearInterval(time);
   }
-  }
+  }// restart timer when restart game
 
 
 /**
@@ -379,7 +380,6 @@ function runGame() {
  totalScore = 0;
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
-showTimer();
 
 
 }
@@ -392,7 +392,6 @@ let currentQuestion = questions[currentQuestionIndex];
 let questionNumber = currentQuestionIndex + 1;
 questionHeader.textContent = `${questionNumber}.${currentQuestion.question}`;
 showAnswers();
-showTimer();// fix the timer
 }
 
 /**
@@ -510,7 +509,7 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
-  questionHeader.innerHTML = `${playersName} you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
+  questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
   sec = 0;
