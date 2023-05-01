@@ -124,7 +124,7 @@ body {
 #question-area {
     background-color: white;
     width: 85%;
-    height: 100px;
+    height: fit-content;
     margin: 0 auto;
     border-radius: 10px;
     position: relative;
@@ -153,6 +153,7 @@ body {
     border-radius: 10px;
     text-align: justify;
     cursor: pointer;
+    color: black;
 }
 
 .btn-answer:hover:not([disabled]) {
