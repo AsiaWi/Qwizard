@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .main-container {
     margin: 5% auto;
     background-color: rgb(186, 179, 236);
@@ -8,26 +9,29 @@
     min-height: 500px;
     border-radius: 10px;
 }
+
 #welcome-header {
     padding-top: 30px;
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: dashed white 2px ;
+    border-bottom: dashed white 2px;
 }
 
 #name {
-    color: white ;
+    color: white;
 }
-#instructions-container{
+
+#instructions-container {
     border: solid white 2px;
     height: fit-content;
     width: 90%;
-    display:block;
+    display: block;
     margin: 0 auto;
     border-radius: 10px;
     background-color: rgba(245, 245, 245, 0.7);
 
 }
+
 .instructions {
     padding: 5px;
 }
@@ -37,22 +41,23 @@
     margin: 10px;
 }
 
- #username{
+#username {
     background-color: rgba(245, 245, 245, 0.7);
     display: block;
     margin: 0 auto;
     width: 90%;
-    height:50px;
+    height: 50px;
     border: solid white 2px;
     border-radius: 10px;
- }
- #start-quiz {
+}
+
+#start-quiz {
     display: none;
- }
+}
 
 
 
- .user-btn:not([hidden]) {
+.user-btn:not([hidden]) {
     display: block;
     margin: 0 auto;
     border: solid white 2px;
@@ -60,14 +65,15 @@
     height: 40px;
     width: 130px;
     margin-top: 10px;
-    color:black;
-    
- }
- .user-btn a {
+    color: black;
+
+}
+
+.user-btn a {
     text-decoration: none;
     color: black;
-   
- }
+
+}
 
 #timer {
     color: black;
@@ -106,6 +112,7 @@ body {
     background-repeat: repeat-y;
     font-family: 'Montserrat', sans-serif;
 }
+
 /*#main-game-area {
     background-color:  rgb(186, 179, 236);
     width: 90%;
@@ -123,9 +130,11 @@ body {
     position: relative;
     top: 10px;
 }
+
 #question-header {
     padding-top: 10px;
 }
+
 #question {
     text-align: justify;
     padding: 4px;
@@ -145,17 +154,20 @@ body {
     text-align: justify;
     cursor: pointer;
 }
-.btn-answer:hover:not([disabled]){
+
+.btn-answer:hover:not([disabled]) {
     border: outset rgba(245, 245, 245, 0.7) 10px;
 
 }
-.btn-answer:disabled{
+
+.btn-answer:disabled {
     cursor: none;
 }
 
 .correct-answer {
     background-color: #9aece8;
 }
+
 .incorrect-answer {
     background-color: #ff721e;
 }
@@ -191,13 +203,14 @@ body {
         margin: 0 auto;
 
     }
+
     #wrong-answer {
         padding-left: 10%;
     }
-   
+
 }
 
 @media screen and (min-width: 930px) {
     #wrong-answer {
         padding-left: 35%;
-}
+    }
