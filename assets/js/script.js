@@ -519,7 +519,7 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
-  questionHeader.innerHTML = ` You answered correctly ${totalScore} out of ${questions.length}questions in ${sec} seconds!`;
+  questionHeader.innerHTML = ` You answered correctly ${totalScore} out of ${questions.length} questions in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
   document.getElementById('add-correct-score').innerHTML = 0;
