@@ -346,6 +346,7 @@ function username() {
     alert('Please enter your username!');
   } else {
     document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
+
     let submit = document.getElementById('submit-username');
   submit.style.display = 'none';
   let clearUsername = document.getElementById('username');
@@ -509,7 +510,7 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
-  questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
+  questionHeader.innerHTML = ` you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
   sec = 0;
