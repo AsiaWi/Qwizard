@@ -1,9 +1,20 @@
 function username() {
   let username = document.getElementById("username").value;
-  document.getElementById("name").innerHTML = `${username}! Are you the quiz wizard?`;
+  if (username == ''){
+    alert('Please enter your username!');
+  } else {
+    document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
+    let submit = document.getElementById('submit-username');
+  submit.style.display = 'none';
+  let clearUsername = document.getElementById('username');
+  clearUsername.style.display = 'none';
   let startQuiz = document.getElementById('start-quiz');
   startQuiz.style.display = 'block';
+  let instructions = document.getElementById('instructions-container');
+  instructions.style.display = 'none';
+  }
 }
+  
 
 
 // Variable holding all quiz questions
@@ -344,6 +355,19 @@ let time = setInterval(showTimer, 1000);
 //let index;
 
 // list of functions
+/**
+ * A function to show and run timer 
+ * for the player to see how long it took to take the quiz
+ */
+function showTimer() {
+  document.getElementById('timer').innerHTML = sec;
+  if (currentQuestionIndex < questions.length){
+    sec++;
+  } else {
+    clearInterval(time);
+  }
+  }
+
 
 /**
 * Main function called when script is fully loaded 
@@ -353,6 +377,7 @@ function runGame() {
  totalScore = 0;
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
+showTimer();
 
 
 }
@@ -483,24 +508,11 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
-  let username = document.getElementById("username").value;
   questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
   sec = 0;
 }
 
-/**
- * A function to show and run timer 
- * for the player to see how long it took to take the quiz
- */
-function showTimer() {
-  document.getElementById('timer').innerHTML = sec;
-  if (currentQuestionIndex < questions.length){
-    sec++;
-  } else {
-    clearInterval(time);
-  }
-  }
 
 runGame();

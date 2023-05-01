@@ -17,13 +17,15 @@
 </head>
 
 <body>
-    <div id="main-container">
+    <div class="main-container">
         <div>
            <h1 id="welcome-header">Welcome to Qwizard<br>
             <span id="name"></span></h1>
         </div>
     <div id="instructions-container">
-        <p class="instructions"> Test your quick, logic thinking and your reading skills! The aim of the quiz is to answer 10 simple but tricky questions in short space of time.</p>
+        <h2 class="instructions">Instructions:</h2>
+        <p class="instructions"> Test your quick, logic thinking and your reading skills!
+            <br> The aim of the quiz is to answer 10 simple but tricky questions in short space of time.</p>
         <ul>
             <li>You can only choose one answer  </li>
             <li> Once chosen click 'NEXT' to go to next question</li>
@@ -35,12 +37,11 @@
     </div>
     <div id="form-container">
     <form method="POST">
-        <input type="text" id="username" placeholder="Type your name here!">
+        <input type="text" id="username" placeholder="Type your name here!" required>
     </form>
     <button id="submit-username" onclick = "username()" class="user-btn">SUBMIT</button>
     <button id="start-quiz"class="user-btn"><a href="quiz.html" aria-label="Start quiz!">START!</a></button>
     </div>
-    <div>
     <script src="assets/js/script.js"></script>
 </body>
 
