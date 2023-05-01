@@ -1,21 +1,3 @@
-function username() {
-  let username = document.getElementById("username").value;
-  if (username == ''){
-    alert('Please enter your username!');
-  } else {
-    document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
-    let submit = document.getElementById('submit-username');
-  submit.style.display = 'none';
-  let clearUsername = document.getElementById('username');
-  clearUsername.style.display = 'none';
-  let startQuiz = document.getElementById('start-quiz');
-  startQuiz.style.display = 'block';
-  let instructions = document.getElementById('instructions-container');
-  instructions.style.display = 'none';
-  }
-}
-  
-
 
 // Variable holding all quiz questions
 let questions = [{
@@ -351,10 +333,30 @@ let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
 
+
+
 //let answeredQuestions = [];
 //let index;
 
 // list of functions
+
+function username() {
+  let username = document.getElementById("username").value;
+  if (username == ''){
+    alert('Please enter your username!');
+  } else {
+    document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
+    let submit = document.getElementById('submit-username');
+  submit.style.display = 'none';
+  let clearUsername = document.getElementById('username');
+  clearUsername.style.display = 'none';
+  let startQuiz = document.getElementById('start-quiz');
+  startQuiz.style.display = 'block';
+  let instructions = document.getElementById('instructions-container');
+  instructions.style.display = 'none';
+  //document.getElementById("quiz-header").innerHTML = `Good luck with Qwizard <br>${username}!`;
+  }
+}
 /**
  * A function to show and run timer 
  * for the player to see how long it took to take the quiz
@@ -508,7 +510,7 @@ function incrementWrongAnswerCount() {
  */
 function showTotalScore() {
   initialState();
-  questionHeader.innerHTML = `you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
+  questionHeader.innerHTML = `${playersName} you scored ${totalScore} out of ${questions.length} in ${sec} seconds!`;
   nextQuestion.innerHTML = 'Try again!';
   nextQuestion.style.display ='block';
   sec = 0;
