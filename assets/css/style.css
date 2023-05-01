@@ -48,8 +48,8 @@
  }
  #start-quiz {
     display: none;
-    
  }
+
 
 
  .user-btn:not([hidden]) {
@@ -63,8 +63,9 @@
     color:black;
     
  }
- #user-btn a {
+ .user-btn a {
     text-decoration: none;
+    color: black;
    
  }
 
