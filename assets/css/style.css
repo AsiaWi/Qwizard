@@ -70,15 +70,16 @@
  }
 
 #timer {
-    color: white;
+    color: black;
     font-size: 35px;
     margin-top: 5px;
     height: 150px;
     width: 150px;
     padding: 10px;
-    background-color: black;
-    border: dashed white 3px;
+    background-color: rgb(220, 128, 180);
+    border: dotted black 8px;
     border-radius: 50%;
+
 }
 
 a>h1 {
