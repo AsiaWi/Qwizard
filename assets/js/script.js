@@ -323,6 +323,7 @@ let questions = [{
   },*/
 
 ];
+
 // Global variables, list
 let questionHeader = document.getElementById('question-header');
 let currentQuestionIndex = 0;
@@ -331,14 +332,15 @@ let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
-
-
-
 //let answeredQuestions = [];
 //let index;
 
 // list of functions
 
+/**
+ * Function allowing user to input their username and then 
+ * see personalised welcome message
+ */
 function username() {
   let username = document.getElementById("username").value;
   if (username == '') {
@@ -358,6 +360,17 @@ function username() {
     //push method? create new array as global and push username in?
   }
 }
+
+/**
+ * Main function called when script is fully loaded 
+ */
+function runGame() {
+  currentQuestionIndex = 0;
+  totalScore = 0;
+  nextQuestion.innerHTML = 'NEXT';
+  showQuestion();
+}
+
 /**
  * A function to show and run timer 
  * for the player to see how long it took to take the quiz
@@ -369,20 +382,8 @@ function showTimer() {
   } else {
     clearInterval(time);
   }
-} // restart timer when restart game
-
-
-/**
- * Main function called when script is fully loaded 
- */
-function runGame() {
-  currentQuestionIndex = 0;
-  totalScore = 0;
-  nextQuestion.innerHTML = 'NEXT';
-  showQuestion();
-
-
 }
+
 /**
  * Function showing question and question number in header/ question area 
  */
@@ -397,7 +398,6 @@ function showQuestion() {
 /**
  * Function shuffling and picking random questions
  */
-
 /*
 function pickRandomQuestion() {
 currentQuestionIndex++;
@@ -451,7 +451,7 @@ function initialState() {
 }
 
 /**
- * Function to show answers against each question/ = showing answer's first property(text) values
+ * Function to show answers against each question = showing answer's first property(text) values
  * add a button for each answer to be displayed
  * collecting dataset from the value of second property(correct)
  */
@@ -474,7 +474,8 @@ function showAnswers() {
  * 
  * Function validating if the answer clicked by user is correct or not
  * Then adding classes to show correct/incorrect answer
- * Then answer buttons disabled to not allow choosing second
+ * Then answer buttons disabled to not allow choosing second answer
+ * once answer is selected the 'next' button will show
  */
 function selectAndCheckAnswer(event) {
   let selectedAnswer = event.target;
@@ -496,22 +497,8 @@ function selectAndCheckAnswer(event) {
 
   nextQuestion.style.display = 'block';
 }
-/**
- * Function showing the number of correctly answered questions to the user
- * during the quiz duration
- */
-function incrementCorrectAnswerCount() {
-  let correctScore = parseInt(document.getElementById('add-correct-score').innerHTML);
-  document.getElementById('add-correct-score').innerHTML = ++correctScore;
-}
-/**
- * function showing the number of incorrectly answered questions to the user
- * during quiz duration
- */
-function incrementWrongAnswerCount() {
-  let incorrectScore = parseInt(document.getElementById('add-incorrect-score').innerHTML);
-  document.getElementById('add-incorrect-score').innerHTML = ++incorrectScore;
-}
+
+
 /**
  * Function to show a total score and total time taken to take the quiz
  * then an option to try again is provided
