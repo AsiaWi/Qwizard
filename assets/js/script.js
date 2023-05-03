@@ -1,4 +1,4 @@
- // Variable holding all quiz questions
+// Variable holding all quiz questions
 let questions = [{
   question: 'What goes up and down but can\'t move?',
   answers: [{
@@ -325,13 +325,15 @@ let questions = [{
 
 // Global variables, list
 let questionHeader = document.getElementById('question-header');
+let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0,10); // shuffles question array and picks first 10 items from it.
 let currentQuestionIndex = 0;
 let answerArea = document.getElementById('answer-area');
 let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
-let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0,10);
+let userName= [];
+
 
 // list of functions
 
@@ -340,12 +342,12 @@ let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0,10);
 * see personalised welcome message
 */
 function username() {
-let username = document.getElementById("username").value;
+let username = [document.getElementById("username").value];
 if (username == '') {
   alert('Please enter your username!');
 } else {
+  localStorage.setItem('name', username);
   document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
-
   let submit = document.getElementById('submit-username');
   submit.style.display = 'none';
   let clearUsername = document.getElementById('username');
@@ -375,7 +377,7 @@ showQuestion();
 */
 function showTimer() {
 document.getElementById('timer').innerHTML = sec;
-if (currentQuestionIndex < questions.length) {
+if (currentQuestionIndex < newQuestions.length) {
   sec++;
 } else {
   clearInterval(time);
@@ -512,7 +514,8 @@ nextQuestion.style.display = 'block';
 */
 function showTotalScore() {
 initialState();
-questionHeader.innerHTML = ` You answered correctly ${totalScore} out of ${newQuestions.length} questions in ${sec} seconds!`;
+let username = localStorage.getItem('name');
+questionHeader.innerHTML = ` ${username} You answered correctly ${totalScore} out of ${newQuestions.length} questions in ${sec} seconds!`;
 nextQuestion.innerHTML = 'Try again!';
 nextQuestion.style.display = 'block';
 document.getElementById('add-correct-score').innerHTML = 0;
