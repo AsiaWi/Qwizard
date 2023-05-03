@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* STYLING FOR ALL PAGES */
+/* Body styling for all pages */
+body {
+    margin: 0% auto;
+    background-image: url(../images/background.webp);
+    background-size: cover;
+    background-repeat: repeat-y;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main div styling for all pages */
 .main-container {
     margin: 5% auto;
     background-color: rgb(186, 179, 236);
@@ -10,53 +21,7 @@
     border-radius: 10px;
 }
 
-#welcome-header {
-    padding-top: 30px;
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: dashed white 2px;
-}
-
-#name {
-    color: white;
-}
-
-#instructions-container {
-    border: solid white 2px;
-    height: fit-content;
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: rgba(245, 245, 245, 0.7);
-
-}
-
-.instructions {
-    padding: 5px;
-}
-
-
-#form-container {
-    margin: 10px;
-}
-
-#username {
-    background-color: rgba(245, 245, 245, 0.7);
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    height: 50px;
-    border: solid white 2px;
-    border-radius: 10px;
-}
-
-#start-quiz {
-    display: none;
-}
-
-
-
+/* used for all buttons (apart from the list of answers) across all pages, */
 .user-btn:not([hidden]) {
     display: block;
     margin: 0 auto;
@@ -69,12 +34,70 @@
 
 }
 
-.user-btn a {
+/* anchors across all pages */
+a {
     text-decoration: none;
     color: black;
+}
+
+/* INDEX PAGE STYLING */
+/* Main header */
+#welcome-header {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: dashed white 2px;
+}
+
+/* styling to show username inputted by the player, then shown below main header */
+#name {
+    color: white;
+}
+
+/* Div holding instructions */
+#instructions-container {
+    border: solid white 2px;
+    height: fit-content;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.7);
 
 }
 
+/* content inside the instructions div */
+.instructions {
+    padding: 5px;
+}
+
+/* Div holding form input options */
+#form-container {
+    margin: 10px;
+}
+
+/* username input */
+#username {
+    background-color: rgba(245, 245, 245, 0.7);
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+#username:hover {
+    border: outset rgba(245, 245, 245, 0.7) 10px;
+}
+
+/* START button shown only once form has been submitted */
+#start-quiz {
+    display: none;
+}
+
+/* QUIZ PAGE STYLING */
+/* timer */
 #timer {
     color: black;
     font-size: 35px;
@@ -88,7 +111,8 @@
 
 }
 
-a>h1 {
+/* header shown during quiz */
+#quiz-header {
     text-align: center;
     font-size: 300%;
     color: black;
@@ -97,30 +121,7 @@ a>h1 {
 
 }
 
-a {
-    text-decoration: none;
-}
-
-#icon {
-    display: none;
-}
-
-body {
-    margin: 0% auto;
-    background-image: url(../images/background.webp);
-    background-size: cover;
-    background-repeat: repeat-y;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/*#main-game-area {
-    background-color:  rgb(186, 179, 236);
-    width: 90%;
-    height: 40%;
-    margin: 0 auto;
-    border-radius: 10px;
-}*/
-
+/* Div holding question */
 #question-area {
     background-color: white;
     width: 85%;
@@ -131,20 +132,19 @@ body {
     top: 10px;
 }
 
+/* displayed question */
 #question-header {
-    padding-top: 10px;
-}
-
-#question {
+    padding: 10px 4px 4px 4px;
     text-align: justify;
-    padding: 4px;
 }
 
+/* Div holding all answer buttons */
 #answer-area {
     padding: 0 2.5% 0 6%;
     margin: 40px auto 0;
 }
 
+/* buttons each holding an answer (shown only once question is listed) */
 .btn-answer {
     width: 95%;
     height: 50px;
@@ -156,55 +156,56 @@ body {
     color: black;
 }
 
+/* answer button hover styling only for when in active state*/
 .btn-answer:hover:not([disabled]) {
     border: outset rgba(245, 245, 245, 0.7) 10px;
 
 }
 
+/* answer button when in disabled state */
 .btn-answer:disabled {
     cursor: none;
 }
 
+/* class styling to show answer selected by user was correct */
 .correct-answer {
     background-color: #9aece8;
 }
 
+/* class styling to show answer selected by user was incorrect */
 .incorrect-answer {
     background-color: #ff721e;
 }
 
+/* Div holding the buttons to navigate through the quiz( next, try again */
 #navigation-area {
     margin: none;
 }
 
-
+/* incremented scores paragraphs */
 #score-area {
     padding: 0 20% 0 23%;
     margin: 0 auto;
 }
 
-#score-area p {
+/* spans showing incremented scores count */
+.answer-count {
     color: white;
     display: flex;
     justify-content: center;
 }
 
-
-
-@media screen and (min-width: 410px) {
-    #icon {
-        display: inline;
-    }
-}
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 680px) {
-    #score-area p {
+    .answer-count {
         display: inline-block;
         text-align: center;
         margin: 0 auto;
 
     }
 
+    /* increment incorrect score paragraph */
     #wrong-answer {
         padding-left: 10%;
     }
@@ -215,3 +216,4 @@ body {
     #wrong-answer {
         padding-left: 35%;
     }
+}
