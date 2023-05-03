@@ -47,7 +47,6 @@ let questions = [{
     },
   ]
 },
-/*
 {
   question: 'If two\’s company and three’s a crowd, what do four and five make?',
   answers: [{
@@ -320,7 +319,7 @@ let questions = [{
     },
     
   ] 
-},*/
+}
 
 ];
 
@@ -332,8 +331,7 @@ let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
-//let answeredQuestions = [];
-//let index;
+let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0,10);
 
 // list of functions
 
@@ -389,7 +387,7 @@ if (currentQuestionIndex < questions.length) {
 */
 function showQuestion() {
 initialState();
-let currentQuestion = questions[currentQuestionIndex];
+let currentQuestion = newQuestions[currentQuestionIndex];
 let questionNumber = currentQuestionIndex + 1;
 questionHeader.textContent = `${questionNumber}.${currentQuestion.question}`;
 showAnswers();
@@ -423,7 +421,7 @@ answeredQuestions.push(randomNumber);
 */
 function handleNextQuestion() {
 currentQuestionIndex++;
-if (currentQuestionIndex < questions.length) {
+if (currentQuestionIndex < newQuestions.length) {
   showQuestion();
 } else {
   showTotalScore();
@@ -431,7 +429,7 @@ if (currentQuestionIndex < questions.length) {
 }
 //Event listener for next button to go to next question
 nextQuestion.addEventListener('click', () => {
-if (currentQuestionIndex < questions.length) {
+if (currentQuestionIndex < newQuestions.length) {
   handleNextQuestion();
 } else {
   runGame();
@@ -455,7 +453,7 @@ while (answerArea.firstChild) {
 * collecting dataset from the value of second property(correct)
 */
 function showAnswers() {
-let currentQuestion = questions[currentQuestionIndex];
+let currentQuestion = newQuestions[currentQuestionIndex];
 currentQuestion.answers.forEach(answer => {
   let answerButton = document.createElement('button');
   answerButton.innerHTML = answer.text;
@@ -514,7 +512,7 @@ nextQuestion.style.display = 'block';
 */
 function showTotalScore() {
 initialState();
-questionHeader.innerHTML = ` You answered correctly ${totalScore} out of ${questions.length} questions in ${sec} seconds!`;
+questionHeader.innerHTML = ` You answered correctly ${totalScore} out of ${newQuestions.length} questions in ${sec} seconds!`;
 nextQuestion.innerHTML = 'Try again!';
 nextQuestion.style.display = 'block';
 document.getElementById('add-correct-score').innerHTML = 0;
