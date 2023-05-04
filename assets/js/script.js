@@ -341,13 +341,14 @@ function runGame() {
 currentQuestionIndex = 0;
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
+showTimer();
 }
 
 /**
 * A function to show and run timer 
 * for the player to see how long it took to take the quiz
 */
-function showTimer() {
+function showTimer(time) {
 document.getElementById('timer').innerHTML = sec;
 if (currentQuestionIndex < newQuestions.length) {
   sec++;
