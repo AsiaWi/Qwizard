@@ -332,6 +332,7 @@ let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
 
+let min = 0;
 
 
 /**
@@ -341,7 +342,6 @@ function runGame() {
 currentQuestionIndex = 0;
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
-showTimer();
 }
 
 /**
@@ -349,14 +349,17 @@ showTimer();
 * for the player to see how long it took to take the quiz
 */
 function showTimer(time) {
-document.getElementById('timer').innerHTML = sec;
+document.getElementById('timer').innerHTML = `${min} : ${sec}`;
 if (currentQuestionIndex < newQuestions.length) {
   sec++;
 } else {
   clearInterval(time);
 }
+if (sec == 60){
+  sec=0;
+  min++;
 }
-
+}
 /**
 * Function showing question and question number in header/ question area 
 */
@@ -462,12 +465,13 @@ function showTotalScore() {
 initialState();
 let correctScore = document.getElementById('add-correct-score').innerHTML;
 let username = localStorage.getItem('name');
-questionHeader.innerHTML = ` ${username} You answered correctly ${correctScore} out of ${newQuestions.length} questions in ${sec} seconds!`;
+questionHeader.innerHTML = ` ${username} You answered correctly ${correctScore} out of ${newQuestions.length} questions in ${min} min : ${sec} sec!`;
 nextQuestion.innerHTML = 'Try again!';
 nextQuestion.style.display = 'block';
 document.getElementById('add-correct-score').innerHTML = 0;
 document.getElementById('add-incorrect-score').innerHTML = 0;
 sec = 0;
+min = 0;
 }
 
 
