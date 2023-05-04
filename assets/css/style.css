@@ -33,9 +33,11 @@ body {
     color: black;
 
 }
-.user-btn:hover{
+
+.user-btn:hover {
     cursor: pointer;
 }
+
 /* anchors across all pages */
 a {
     text-decoration: none;
@@ -57,7 +59,8 @@ a {
 }
 
 /* Div holding instructions on index page and div container on 404 page*/
-#instructions-container, #container {
+#instructions-container,
+#container {
     border: solid white 2px;
     height: fit-content;
     width: 90%;
@@ -65,7 +68,6 @@ a {
     margin: 0 auto;
     border-radius: 10px;
     background-color: rgba(245, 245, 245, 0.7);
-
 }
 
 /* content inside the instructions div*/
@@ -137,7 +139,7 @@ a {
 /* displayed question */
 #question-header {
     padding: 10px 4px 4px 4px;
-    text-align:left;
+    text-align: left;
 }
 
 /* Div holding all answer buttons */
@@ -179,6 +181,41 @@ a {
     background-color: #ff721e;
 }
 
+/* styling for main container shown only when a function to show leaderboard get's called */
+#highscore-container {
+    border: solid white 2px;
+    height: fit-content;
+    width: 50%;
+    display: none;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+
+}
+
+/* button styling, used to show leaderboard */
+#leaderboard {
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.7);
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    display: none;
+
+}
+
+/* List items/ top ten scores shown on leaderboard */
+#highscore-list li {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+
+}
+
 /* Div holding the buttons to navigate through the quiz( next, try again */
 #navigation-area {
     margin: none;
@@ -196,11 +233,13 @@ a {
     display: flex;
     justify-content: center;
 }
+
 /* 404 page */
 /* message inside the container, container styling same as #instructions-container above*/
 .message {
     padding: 10px;
 }
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 680px) {
@@ -222,36 +261,4 @@ a {
     #wrong-answer {
         padding-left: 35%;
     }
-}
-
-
-#highscore-container{
-    border: solid white 2px;
-    height: fit-content;
-    width: 50%;
-    display: none;
-    margin: 10px auto;
-    border-radius: 10px;
-    background-color: white;
-    padding: 10px;
-
-}
-#leaderboard {
-    text-align: center;
-    background-color: rgba(245, 245, 245, 0.7);
-    width: 90%;
-    height: fit-content;
-    margin: 0 auto;
-    border-radius: 10px;
-    position: relative;
-    top: 10px;
-    display: none;
-    
-}
-
-#highscore-list li{
-    margin: 0 auto;
-    padding: 10px;
-    text-align: left;
-    
 }
