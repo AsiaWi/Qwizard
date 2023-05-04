@@ -1,3 +1,5 @@
+//js code for index.html
+
 // variable 
 let submit = document.getElementById('submit-username');
 
