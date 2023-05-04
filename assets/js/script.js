@@ -499,6 +499,7 @@ function incrementWrongAnswerCount() {
 function showTotalScore() {
   initialState();
   let correctScore = document.getElementById('add-correct-score').innerHTML;
+  localStorage.setItem('correctScore', correctScore);
   let username = localStorage.getItem('name');
   questionHeader.innerHTML = ` ${username} you answered correctly ${correctScore} out of ${newQuestions.length} questions in ${min} min : ${sec} sec!`;
   nextQuestion.innerHTML = 'Try again!';
@@ -507,7 +508,25 @@ function showTotalScore() {
   document.getElementById('add-incorrect-score').innerHTML = 0;
   sec = 0;
   min = 0;
+  showLeaderBoard();
 }
+ function showLeaderBoard(){
+  let highScoresList = document.getElementById('highscore-list')
+  const username = localStorage.getItem('name');
+  const correctScore= localStorage.getItem('correctScore');
+  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+  const MAX_HIGH_SCORES= 3;
+  let score = {score: correctScore ,name: `${username}`};
+  highScores.push(score);
+  highScores.sort( (a,b) => b.score - a.score);
+  highScores.splice(3);
+  localStorage.setItem('highScores', JSON.stringify((highScores)));
+  
+ highScoresList.innerHTML = highScores
+  .map(score => { 
+    return `<li class='high-scores'>${score.name}-${score.score}</li>`;})
+  .join('');
+ }
 
 
 runGame();
