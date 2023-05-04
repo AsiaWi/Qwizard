@@ -465,7 +465,7 @@ function showTotalScore() {
 initialState();
 let correctScore = document.getElementById('add-correct-score').innerHTML;
 let username = localStorage.getItem('name');
-questionHeader.innerHTML = ` ${username} You answered correctly ${correctScore} out of ${newQuestions.length} questions in ${min} min : ${sec} sec!`;
+questionHeader.innerHTML = ` ${username} you answered correctly ${correctScore} out of ${newQuestions.length} questions in ${min} min : ${sec} sec!`;
 nextQuestion.innerHTML = 'Try again!';
 nextQuestion.style.display = 'block';
 document.getElementById('add-correct-score').innerHTML = 0;

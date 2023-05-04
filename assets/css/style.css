@@ -54,8 +54,8 @@ a {
     color: white;
 }
 
-/* Div holding instructions */
-#instructions-container {
+/* Div holding instructions on index page, same styling also used for div holding messagge on 404 page*/
+.instructions-container {
     border: solid white 2px;
     height: fit-content;
     width: 90%;
@@ -66,7 +66,7 @@ a {
 
 }
 
-/* content inside the instructions div */
+/* content inside the instructions div / styling also used for the message on 404 page*/
 .instructions {
     padding: 5px;
 }
