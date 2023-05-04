@@ -1,328 +1,12 @@
-// Variable holding all quiz questions
-let questions = [{
-    question: 'What goes up and down but can\'t move?',
-    answers: [{
-        text: 'A staircase',
-        correct: true
-      },
-      {
-        text: 'A lift',
-        correct: false
-      },
-      {
-        text: 'Age',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'What’s something that can be broken but never held?',
-    answers: [{
-        text: ' Trust',
-        correct: false
-      },
-      {
-        text: ' A promise',
-        correct: true
-      },
-      {
-        text: 'A glass',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'What word is spelled incorrectly in every single dictionary?',
-    answers: [{
-        text: 'Incorrectly',
-        correct: true
-      },
-      {
-        text: 'Misspel',
-        correct: false
-      },
-      {
-        text: 'Nauseous',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'If two\’s company and three’s a crowd, what do four and five make?',
-    answers: [{
-        text: 'A strike',
-        correct: false
-      },
-      {
-        text: 'A group',
-        correct: false
-      },
-      {
-        text: 'Nine',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'If you were running a race and passed the person in second place, what place would you be in now?',
-    answers: [{
-        text: 'First place',
-        correct: false
-      },
-      {
-        text: 'Second place',
-        correct: true
-      },
-      {
-        text: ' Third place',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: ' What two words, when combined, hold the most letters?',
-    answers: [{
-        text: ' Post office',
-        correct: true
-      },
-      {
-        text: ' Large envelope',
-        correct: false
-      },
-      {
-        text: ' Post box',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: ' What five-letter word becomes smaller when you add two letters and even smaller when you add three?',
-    answers: [{
-        text: ' Baby',
-        correct: false
-      },
-      {
-        text: ' Tiny',
-        correct: false
-      },
-      {
-        text: 'Small',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'There are ten fingers on two hands. How many fingers are there on ten hands?',
-    answers: [{
-        text: '100',
-        correct: false
-      },
-      {
-        text: '10',
-        correct: false
-      },
-      {
-        text: '50',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'There were ten cars in the shop. Customers bought all but nine of them. How many remain in the shop?',
-    answers: [{
-        text: '9',
-        correct: true
-      },
-      {
-        text: '1',
-        correct: false
-      },
-      {
-        text: '0',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'Where can you find cities, towns, shops, and streets but no people?',
-    answers: [{
-        text: ' A movie',
-        correct: false
-      },
-      {
-        text: 'A cinema',
-        correct: false
-      },
-      {
-        text: 'A map',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'Where can you add 2 to 11 and get 1?',
-    answers: [{
-        text: 'A calculator',
-        correct: false
-      },
-      {
-        text: ' A bank',
-        correct: false
-      },
-      {
-        text: 'A clock',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'How many letters are in \'the alphabet\'?',
-    answers: [{
-        text: '11',
-        correct: true
-      },
-      {
-        text: '26',
-        correct: false
-      },
-      {
-        text: '37',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'What is something that you can catch that isn’t thrown?',
-    answers: [{
-        text: 'A ball',
-        correct: false
-      },
-      {
-        text: 'A slipper',
-        correct: false
-      },
-      {
-        text: 'A cold',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'What has a thumb and four fingers but isn\’t alive?',
-    answers: [{
-        text: 'A hand',
-        correct: false
-      },
-      {
-        text: 'A glove',
-        correct: true
-      },
-      {
-        text: 'A foot',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: ' What goes up but never down?',
-    answers: [{
-        text: 'An elevator',
-        correct: false
-      },
-      {
-        text: ' A staircase',
-        correct: false
-      },
-      {
-        text: ' Your age',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'I have one head, one foot, and four legs. What am I?',
-    answers: [{
-        text: 'A dog',
-        correct: false
-      },
-      {
-        text: 'A person',
-        correct: false
-      },
-      {
-        text: ' A bed',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: ' I’m light as a feather, but not even the strongest girl can hold me for more than 5 minutes. What am I?',
-    answers: [{
-        text: 'A parrot',
-        correct: false
-      },
-      {
-        text: 'Breath',
-        correct: true
-      },
-      {
-        text: 'A mouse',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'What has one eye but can’t see anything at all?',
-    answers: [{
-        text: ' A needle',
-        correct: true
-      },
-      {
-        text: 'A snake',
-        correct: false
-      },
-      {
-        text: ' A bat',
-        correct: false
-      },
-    ]
-  },
-  {
-    question: 'What has a face and two hands, but no arms or legs?',
-    answers: [{
-        text: ' A person',
-        correct: false
-      },
-      {
-        text: 'A cat',
-        correct: false
-      },
-      {
-        text: ' A clock',
-        correct: true
-      },
-    ]
-  },
-  {
-    question: 'I’m so fragile that if you say my name, you\’ll break me. What am I?',
-    answers: [{
-        text: ' A promise',
-        correct: false
-      },
-      {
-        text: ' An oath',
-        correct: false
-      },
-      {
-        text: ' Silennce',
-        correct: true
-      },
-
-    ]
-  }
-
-];
 //js code for quiz.html 
+
+/* I have used the tutorial from:
+https://www.youtube.com/watch?v=PBcqGxrr9g8
+as a base for the quiz
+*/
+fetch('./questions.json')
+    .then((results) => results.json())
+    .then(console.log);
 
 // Global variables, list
 let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10); // shuffles question array and picks first 10 items from it.
@@ -345,6 +29,10 @@ let leaderBoard = document.getElementById('highscore-container'); //used to mani
  * interval called every 1000miliseconds / every sec
  * then when sec = 60, the fucntion will add a minute and start sec again
  */
+
+//https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz used for help with building the timer.
+//last example, reversed and counted up rather than count-down
+
 function showTimer(time) {
   document.getElementById('timer').innerHTML = `${min} : ${sec}`;
   if (currentQuestionIndex < newQuestions.length) {
@@ -357,7 +45,6 @@ function showTimer(time) {
     min++;
   }
 }
-
 /**
  * Main function called as soon as user clicks on START button from index page
  * starts of with question index 0
@@ -483,7 +170,7 @@ function incrementCorrectAnswerCount() {
   let correctScore = parseInt(document.getElementById("add-correct-score").innerText);
   document.getElementById("add-correct-score").innerText = ++correctScore;
 }
-
+//for both increment functions I have used love maths project for help
 /**
  * incrementing the number of incorrectly answered questions
  * getting the number from a span with wrong answers and incrementing it by one
@@ -493,7 +180,15 @@ function incrementWrongAnswerCount() {
   document.getElementById("add-incorrect-score").innerText = ++incorrectScore;
 }
 
-// FOLLOWING FUNCTIONS/CODE DEALS WITH SCORE PAGE AND LEADERBOARD
+// FOLLOWING FUNCTIONS/CODE DEALS WITH TOTAL SCORE PAGE AND LEADERBOARD
+
+/* for help with building a leaderboard I have used:
+https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
+&
+https://www.youtube.com/watch?v=o3MF_JmQxYg&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=7  
+(videos7,8,9)
+*/
+
 
 //add event listener for the button encouraging user to view leaderboard.The button will call the showLeaderBoard function
 checkLeaderBoard.addEventListener('click', showLeaderBoard);
@@ -535,6 +230,7 @@ function leaderBoardButton() {
   leaderBoard.style.display = 'block';
 }
 /**
+ * please note I have added the same comments against most of the lines of code for this function, for ease of understanding
  * This function will show the username and total score from local storage
  * changing the heading of the leaderboard once user clicks on the button to open as per previous function
  * getting and displying a list which will later hold usernames and scores
@@ -576,3 +272,4 @@ function showLeaderBoard() {
 
 
 runGame();
+console.log(JSON.parse(questions));

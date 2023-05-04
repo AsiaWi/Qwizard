@@ -1,5 +1,8 @@
 //js code for index.html
 
+/* https://stackoverflow.com/questions/58750774/ask-user-enter-name-with-javascript-and-html
+used to create username function (answer from Zevan used as a base)*/
+
 // variable 
 let submit = document.getElementById('submit-username');
 
