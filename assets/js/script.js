@@ -324,49 +324,21 @@ let questions = [{
 ];
 
 // Global variables, list
+let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0,10);  // shuffles question array and picks first 10 items from it.
 let questionHeader = document.getElementById('question-header');
-let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0,10); // shuffles question array and picks first 10 items from it.
 let currentQuestionIndex = 0;
 let answerArea = document.getElementById('answer-area');
-let totalScore = 0;
 let nextQuestion = document.getElementById('next-btn');
 let sec = 0;
 let time = setInterval(showTimer, 1000);
-let userName= [];
 
 
-// list of functions
-
-/**
-* Function allowing user to input their username and then 
-* see personalised welcome message
-*/
-function username() {
-let username = [document.getElementById("username").value];
-if (username == '') {
-  alert('Please enter your username!');
-} else {
-  localStorage.setItem('name', username);
-  document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
-  let submit = document.getElementById('submit-username');
-  submit.style.display = 'none';
-  let clearUsername = document.getElementById('username');
-  clearUsername.style.display = 'none';
-  let startQuiz = document.getElementById('start-quiz');
-  startQuiz.style.display = 'block';
-  let instructions = document.getElementById('instructions-container');
-  instructions.style.display = 'none';
-  //document.getElementById("quiz-header").innerHTML = `Good luck with Qwizard <br>${username}!`;
-  //push method? create new array as global and push username in?
-}
-}
 
 /**
 * Main function called when script is fully loaded 
 */
 function runGame() {
 currentQuestionIndex = 0;
-totalScore = 0;
 nextQuestion.innerHTML = 'NEXT';
 showQuestion();
 }
@@ -395,32 +367,6 @@ questionHeader.textContent = `${questionNumber}.${currentQuestion.question}`;
 showAnswers();
 }
 
-/**
-* Function shuffling and picking random questions
-*/
-/*
-function pickRandomQuestion() {
-currentQuestionIndex++;
-let randomNumber = Math.floor(Math.random() * questions.length);
-if (answeredQuestions.length === 10) {
-showTotalScore();
-} else {
-if (answeredQuestions.length > 0) {
-  if (answeredQuestions.includes(randomNumber)) {
-    pickRandomQuestion();
-  } else {
-    Index = randomNumber;
-    showQuestion();
-  }
-}
-if (answeredQuestions.length == 0) {
-  Index = randomNumber;
-  showQuestion();
-}
-answeredQuestions.push(randomNumber);
-}
-}
-*/
 function handleNextQuestion() {
 currentQuestionIndex++;
 if (currentQuestionIndex < newQuestions.length) {
@@ -492,7 +438,6 @@ let correctAnswer = selectedAnswer.dataset.correct === 'true';
 if (correctAnswer) {
   selectedAnswer.classList.add('correct-answer');
   incrementCorrectAnswerCount();
-  totalScore++;
 } else {
   selectedAnswer.classList.add('incorrect-answer');
   incrementWrongAnswerCount();
@@ -514,8 +459,9 @@ nextQuestion.style.display = 'block';
 */
 function showTotalScore() {
 initialState();
+let correctScore = document.getElementById('add-correct-score').innerHTML;
 let username = localStorage.getItem('name');
-questionHeader.innerHTML = ` ${username} You answered correctly ${totalScore} out of ${newQuestions.length} questions in ${sec} seconds!`;
+questionHeader.innerHTML = ` ${username} You answered correctly ${correctScore} out of ${newQuestions.length} questions in ${sec} seconds!`;
 nextQuestion.innerHTML = 'Try again!';
 nextQuestion.style.display = 'block';
 document.getElementById('add-correct-score').innerHTML = 0;
