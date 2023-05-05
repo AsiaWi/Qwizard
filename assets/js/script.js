@@ -6,8 +6,8 @@ as a base for the quiz
 */
 //add to load questions from json file
 async function loadQuestions() {
-  const response = await fetch('./questions.json');
-  const questions = await response.json();
+  let response = await fetch("./assets/js/questions.json");
+  let questions = await response.json();
   return questions;
 }
 
