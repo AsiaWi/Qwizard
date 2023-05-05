@@ -1,6 +1,6 @@
-import questions from './questions.json' assert { type: 'json' };
+import questions from './questions.json' assert { type: 'json' }; // importing questions.json file
 
-//js code for quiz.html 
+ //js code for quiz.html 
 
 /* I have used the tutorial from:
 https://www.youtube.com/watch?v=PBcqGxrr9g8
@@ -191,7 +191,15 @@ https://www.youtube.com/watch?v=o3MF_JmQxYg&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4U
 
 
 //add event listener for the button encouraging user to view leaderboard.The button will call the showLeaderBoard function
-checkLeaderBoard.addEventListener('click', showLeaderBoard);
+/*checkLeaderBoard.addEventListener('click', showLeaderBoard);*/
+
+checkLeaderBoard.addEventListener('click', () => {
+  if (showLeaderBoard() === false) {
+    showLeaderBoard();
+  } else if (showLeaderBoard() === true) {
+    showTotalScore();
+  }
+});
 
 /**
  * current correct score will be taken and used in final messege
