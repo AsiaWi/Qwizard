@@ -1,4 +1,5 @@
- [{
+ [{  "type": "module",
+
     "question": "What goes up and down but can't move?",
     "answers": [{
         "text": "A staircase",

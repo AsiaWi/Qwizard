@@ -1,12 +1,12 @@
+import questions from './questions.json' assert { type: 'json' };
+
 //js code for quiz.html 
 
 /* I have used the tutorial from:
 https://www.youtube.com/watch?v=PBcqGxrr9g8
 as a base for the quiz
 */
-fetch('./questions.json')
-    .then((results) => results.json())
-    .then(console.log);
+
 
 // Global variables, list
 let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10); // shuffles question array and picks first 10 items from it.
