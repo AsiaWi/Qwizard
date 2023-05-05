@@ -1,11 +1,21 @@
-import questions from './questions.json' assert { type: 'json' }; // importing questions.json file
-
- //js code for quiz.html 
+//js code for quiz.html 
 
 /* I have used the tutorial from:
 https://www.youtube.com/watch?v=PBcqGxrr9g8
 as a base for the quiz
 */
+//add to load questions from json file
+async function loadQuestions() {
+  const response = await fetch('./questions.json');
+  const questions = await response.json();
+  return questions;
+}
+
+//Wrapped entire code in an async function,to be able to use 'await' to load the questions
+(async () => {
+  let questions = await loadQuestions();
+
+ 
 
 
 // Global variables, list
@@ -281,3 +291,4 @@ function showLeaderBoard() {
 
 runGame();
 console.log(JSON.parse(questions));
+})();
