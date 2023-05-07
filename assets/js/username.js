@@ -21,7 +21,7 @@ function username() {
     alert('Please enter your username!');
   } else {
     localStorage.setItem('name', username);
-    document.getElementById("name").innerHTML = `${username}!<br> Are you the quiz wizard?`;
+    document.getElementById("name").innerHTML = `Welcome ${username}!<br> Are you the quiz wizard?`;
     submit.style.display = 'none';
     let clearUsername = document.getElementById('username');
     clearUsername.style.display = 'none';

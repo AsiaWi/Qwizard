@@ -10,6 +10,16 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* header styling */
+.quiz-header {
+    text-align: center;
+    font-size: 300%;
+    color: black;
+    margin: auto;
+    font-weight: lighter;
+
+}
+
 /* Main div styling for all pages */
 .main-container {
     margin: 5% auto;
@@ -45,17 +55,12 @@ a {
 }
 
 /* INDEX PAGE STYLING */
-/* Main header */
-#welcome-header {
-    padding-top: 30px;
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: dashed white 2px;
-}
 
 /* styling to show username inputted by the player, then shown below main header */
 #name {
     color: white;
+    font-size: 80%;
+    font-weight: 600;
 }
 
 /* Div holding instructions on index page and div container on 404 page*/
@@ -98,8 +103,20 @@ a {
 /* START button shown only once form has been submitted */
 #start-quiz {
     display: none;
+    margin: 0 auto;
+    border: solid white 2px;
+    border-radius: 10px;
+    height: 40px;
+    width: 130px;
+    color: black;
+    text-align: center;
+    padding: 28px 10px 10px;
+    font-weight: 600;
+    background-color: rgba(245, 245, 245, 0.7);
 }
-
+#start-quiz:hover {
+    cursor: pointer;
+}
 /* QUIZ PAGE STYLING */
 /* timer */
 #timer {
@@ -112,16 +129,6 @@ a {
     background-color: rgb(220, 128, 180);
     border: dotted black 8px;
     border-radius: 50%;
-
-}
-
-/* header shown during quiz */
-#quiz-header {
-    text-align: center;
-    font-size: 300%;
-    color: black;
-    margin: auto;
-    font-weight: lighter;
 
 }
 
@@ -218,7 +225,7 @@ a {
 
 /* Div holding the buttons to navigate through the quiz( next, try again */
 #navigation-area {
-    margin: none;
+    margin: 0;
 }
 
 /* incremented scores paragraphs */
