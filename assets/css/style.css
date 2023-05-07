@@ -17,6 +17,7 @@ body {
     color: black;
     margin: auto;
     font-weight: lighter;
+    padding-bottom: 10px;
 
 }
 
@@ -163,6 +164,7 @@ a {
     margin: 5px;
     border-radius: 10px;
     text-align: justify;
+    font-size: 20px;
     cursor: pointer;
     color: black;
 }
@@ -237,6 +239,7 @@ a {
 /* spans showing incremented scores count */
 .answer-count {
     color: white;
+    font-weight: 600;
     display: flex;
     justify-content: center;
 }
