@@ -20,8 +20,9 @@ body {
     padding-bottom: 10px;
 
 }
-.quiz-header:hover {
+#quiz-header:hover {
     color: white;
+    font-size: 350%;
 }
 
 /* Main div styling for all pages */
