@@ -1,20 +1,20 @@
 # Qwizard
 Qwizard is an online quiz, helping to evaluate your quick, logical thinking and reading/listening skills. Do you ever feel like you're listening to someone but not really hearing the context? This quick, 10 questions quiz will help you understand if you let your mind wonder about or actually process the words and focus on the meaning.<br>
-Even though the quiz has some tricky questions, they are all simple and don't require any special knowledge, so it is aimed towards anyone who can read. It's meant to be fun, not difficult and the color pallete will surely let you know of that as soon as you see it!
+Even though the quiz has some tricky questions, they are all simple and don't require any special knowledge, so it is aimed towards anyone who can read. It's meant to be fun, not difficult and the colour pallete will surely let you know of that as soon as you see it!
 
 ![mockup](assets/docs/mockup_techsini_screenshot.png)
 
 ## FEATURES
 ### Main header
 * This is shown the same on every page for consistent design, it does change however to a personalised, welcome message as soon as user enters a username. Once user clicks 'start' located under the welcome message, the user is taken to a quiz and the header from that moment includes a link which user can use if they want to be taken back to home page/ instructions page.
-* Simple, not busy design, when hover over will change colour, allowing the user to easily navigate back to the beggining.
+* When hovered over, the header will change the colour. Simple, not busy design, allowing the user to easily navigate back to the beggining.
 ![main_header](assets/docs/main_header.png)
 ### Home page
 * The home page includes two features below the header.
-## Instructions 
+#### Instructions 
 * These are the main feature, quick description of what is the aim of the quiz and general info (ie. number of questions within the quiz) followed by simple list of steps and what happens if you follow them ( username -> start -> timer). The aim of this section is to let the user know what to expect.
 ![home_page_instructions](assets/docs/home_page_instructions.png)
-## username input
+#### Username input
 * Previous instructions advise the user of having to type username. User has to input username if not entered, and user clicks 'submit'an alert will be displayed.
   The aim of this is to be able to display personalised welcome message and then view the score within leaderboard/if applies.
 * If user adds the username, they will be taken to a personalised welcome message and an option to click 'START' when ready to start answering questions
@@ -22,45 +22,45 @@ Even though the quiz has some tricky questions, they are all simple and don't re
 ![welcome_message](assets/docs/welcome_message.png)
 ### Quiz page
 * Once user clicks the start button below previously seen welcome message, they will be taken to a quiz page.  Five features have been implemented here:
-## Timer
+#### Timer
 * Displayed at the top left close to the header. The aim of this feature is for the user to be able to track the time taken to answer the questions. This will not be shown in leaderboard but as the aim of the quiz is to answer the 10 questions correctly as quick as possible, each user can see the progress for themselves and see the total time taken to commplete quiz in final score message.
 ![quiz_page_timer](assets/docs/quiz_page_timer.png)
-## Question displayed
+#### Question displayed
 * The top of the page will display the question number followed by the question
 * The aim of displaying the number is so that the user can see how many questions they have answered. And as we previously made the user aware of the total number of questions, they can easily figure out how many questions is left.
 * The questions will be displayed randomly and each time the user takes the quiz they will receive a different set of questions, the aim of this is to not bore the user with the same set of questions over and over again.
 ![quiz_page_question](assets/docs/quiz_page_question.png)
-## Answers displayed
-* Each question will be assigned with 3 different answers. User can only pick one of them and once selected, all other options will be disabled. Each selected, correct answer will be highlighted with a greenish/turquoise colour, matching the background colours. Each incorrectly selected answer will be highlighted with reddish/burnt orange colour matching the colours from the background for consistent design.
+#### Answers displayed
+* Each question will be assigned with 3 different answers. User can only pick one of them and once selected, all other options will be disabled. Each selected, correct answer will be highlighted with a greenish/turquoise colour, matching the background colours. Each incorrectly selected answer will be highlighted with reddish/burnt orange colour matching the colours from the background too, for consistent design.
 ![quiz_page_answers](assets/docs/quiz_page_answers.png)
-## Next button
-* The next button will only display once one answer has been selected, the aim of this is so that the user can't skip a question and to not have to display an alert to make them aware of having to pick at least one option if the button was displayed.
+#### Next button
+* The next button will only display once one answer has been selected, the aim of this is so that the user can't skip a question and to not have to display an alert to make them aware of having to pick at least one option, if the button was displayed.
 ![quiz_page_next](assets/docs/quiz_page_next.png)
-## Incremented score count display
-* This feature is displayed below the next button. The aim of this is to that a user can keep track of the progress throughout the game.
+#### Incremented score count display
+* This feature is displayed below the next button. The aim of this is so that a user can keep track of the progress throughout the game.
 ![quiz_page_increment_score](assets/docs/quiz_page_increment_score.png)
 ### 404 ERROR PAGE NOT FOUND
 * This page will show for a user if wrong link for the page is entered. 
 * The benefit of the page is that customer get's clear message with a link to go back to home page so that they can start from begging. User won't have to use browsers back button.
 ![404_page](assets/docs/404_page.png)
 ### Features left to implement
-
+* In the future I would like to create an option for the user to create an account and store the progress
+* For the user to be able to pick different categories of the questions for example test maths skills, history knowledge or foreign language skills
+* For the user to be able to compete against another players
 
 ## DESIGN
-* Medium to large screen wireframe
+* small to large screen wireframe ( quiz will look the same across all screen sizes. There will be slight difference in displaying incremented score count but still can be found under the answers)
      * Home page
-             ![home_page](assets/docs/home-page-wireframe.png)
+             ![home_page](assets/docs/home_page_wireframe.png)
+     * this will be amended to welcome message with JS once user clicks 'submit' button
+             ![welcome_message](assets/docs/welcome_message_wireframe.png)
      * Quiz page
-             ![contact_page](assets/docs/contact-page-wireframe.png)
+             ![quiz_page](assets/docs/quiz_page_wireframe.png)
+     * this will be amended to display total score and leaderboard with JS once user answers last question and clicks next
+             ![total_score](assets/docs/quiz_page_total_score_wireframe.png)
      * 404 page 
-             ![thankyou_page](assets/docs/thankyou-page-wireframe.png)
-* Small screen wireframe
-     * Home page
-             ![home_page](assets/docs/home-page-wireframe.png)
-     * Quiz page
-             ![contact_page](assets/docs/contact-page-wireframe.png)
-     * 404 page 
-             ![thankyou_page](assets/docs/thankyou-page-wireframe.png)
+             ![404_page](assets/docs/404_page_wireframe.png)
+
 
 ## TESTING
 
@@ -74,12 +74,11 @@ Website has been checked for responsiveness through Development tools. In order 
    scroll bar is showing.
 
 * Expected- page is user friendly when viewing the website on small and large screens.
-* Actual- website looks good, no bottom scroll bar showing, all content clearly visible. Website now is user friendly on all screen sizes.
+* Actual- website looks good, no bottom scroll bar showing, all content clearly visible. Website is user friendly on all screen sizes.
 
 * The following devices have been used to check responsiveness:
     * Iphone 13 Pro
     * Google Pixel 7 Pro 
-    * Samsung Galaxy S5
     * Surface Pro
     * Asus Vivobook
 
@@ -90,6 +89,7 @@ Each page checked with the help of WAVE Accessibility tool (https://wave.webaim.
 * alternative text as a function for screen readers or in events when images don't load
 * structural elements - for users of assistive technology as well as visual and semantic meaning
 * language of the document- for screen readers
+
 ### Manual Testing
 Manual testing performed, to ensure website performs well on different browsers and devices.
 * Browsers
@@ -98,12 +98,11 @@ Manual testing performed, to ensure website performs well on different browsers 
     * Microsoft Edge
     * Firefox
 
-        * Issue: Text inside buttons and form input shown as link when viewed on Safari.
+        * Issue: Text inside buttons and form input shown with no styling when viewed on Safari.
         * Fix: I have styled the text so that it looks the same when viewed in Safari as it does on other browsers. 
 * Devices
     * Iphone 13 Pro
     * Google Pixel 7 Pro 
-    * Samsung Galaxy S5
     * Surface Pro
     * Asus Vivobook
 
@@ -111,12 +110,12 @@ Manual testing performed, to ensure website performs well on different browsers 
          * Fix: I have changed the method and instead of importing the file I have used 'fetch' and wrapped my code inside async function, this worked and questions now display fine.
 
 ### Lighthouse
-* HOME PAGE (desktop/ mobile)
+* HOME PAGE (desktop & mobile)
 ![home_page_desktop](assets/docs/lighthouse_home_page_desktop.png)
-![home_page_mmobile](assets/docs/lighthouse_home_page_mobile.png)
-* QUIZ PAGE (desktop/ mobile)
-![guide_page_desktop](assets/docs/lighthouse_guide_page_desktop.png)
-![guide_page_mobile](assets/docs/lighthouse_guide_page_mobile.png)
+![home_page_mobile](assets/docs/lighthouse_home_page_mobile.png)
+* QUIZ PAGE (desktop & mobile)
+![quiz_page_desktop](assets/docs/lighthouse_quiz_page_desktop.png)
+![quiz_page_mobile](assets/docs/lighthouse_quiz_page_mobile.png)
 
 ### Functional Testing
 * Navigation link
@@ -129,10 +128,11 @@ Manual testing performed, to ensure website performs well on different browsers 
 
 * Buttons
     * All checked and work as expected
+
 |Button/ anchor link (location)                        | DESTINATION PAGE                      | PAGE OPENS IN NEW TAB       |
 |------------------------------------------------------|---------------------------------------|-----------------------------|
 |'Submit'(home page/below username input)              | index.html/welcome msg                | no- as expected             |
-|'START'(home page/displayed after clicking submit     | quiz.html/1st question displayed      | no- as expected             |
+|'START'(home page/displayed after clicking submit)    | quiz.html/1st question displayed      | no- as expected             |
 |'Next' (displayed once answer is selected)            | quiz.html/next question selected      | no- as expected             |
 |'Try again'(quiz.html/displayed below final score)    | quiz.html/1st question displayed      | no- as expected             |
 |'leaderboard'(quiz.html/displayed below final score)  | quiz.html/leaderboard list displayed  | no- as expected             |

@@ -20,6 +20,7 @@ body {
     padding-bottom: 10px;
 
 }
+
 #quiz-header:hover {
     color: white;
     font-size: 350%;
@@ -119,9 +120,11 @@ a {
     font-weight: 600;
     background-color: rgba(245, 245, 245, 0.7);
 }
+
 #start-quiz:hover {
     cursor: pointer;
 }
+
 /* QUIZ PAGE STYLING */
 /* timer */
 #timer {
