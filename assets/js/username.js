@@ -26,7 +26,7 @@ function username() {
     let clearUsername = document.getElementById('username');
     clearUsername.style.display = 'none';
     let label = document.getElementById('label');
-    label.style.display = 'none';
+    label.style.visibility = 'hidden';
     let startQuiz = document.getElementById('start-quiz');
     startQuiz.style.display = 'block';
     let instructions = document.getElementById('instructions-container');

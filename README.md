@@ -102,10 +102,11 @@ Manual testing performed, to ensure website performs well on different browsers 
         * Fix: I have styled the text so that it looks the same when viewed in Safari as it does on other browsers. 
 * Devices
     * Iphone 13 Pro
-    * Google Pixel 7 Pro 
     * Motorola Edge 20
     * Surface Pro
     * Asus Vivobook
+    * Samsung Galaxy A12 
+    * Iphone 14 
 
          * Issue: Questions don't show after moving the quiz questions into json file- when viewed on Iphone/Safari
          * Fix: I have changed the method and instead of importing the file I have used 'fetch' and wrapped my code inside async function, this worked and questions now display fine.
