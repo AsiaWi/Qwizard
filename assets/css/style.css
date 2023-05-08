@@ -64,7 +64,7 @@ a {
 
 /* styling to show username inputted by the player, then shown below main header */
 #name {
-    color: white;
+    color: #ff721e;
     font-size: 80%;
     font-weight: 600;
 }
@@ -245,7 +245,7 @@ a {
 
 /* spans showing incremented scores count */
 .answer-count {
-    color: white;
+    color: black;
     font-weight: 600;
     display: flex;
     justify-content: center;
