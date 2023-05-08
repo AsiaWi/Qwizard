@@ -25,6 +25,8 @@ function username() {
     submit.style.display = 'none';
     let clearUsername = document.getElementById('username');
     clearUsername.style.display = 'none';
+    let label = document.getElementById('label');
+    label.style.display = 'none';
     let startQuiz = document.getElementById('start-quiz');
     startQuiz.style.display = 'block';
     let instructions = document.getElementById('instructions-container');

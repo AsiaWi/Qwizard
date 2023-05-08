@@ -63,7 +63,7 @@ a {
 
 /* styling to show username inputted by the player, then shown below main header */
 #name {
-    color: #ff721e;
+    color: black;
     font-size: 80%;
     font-weight: 600;
 }
