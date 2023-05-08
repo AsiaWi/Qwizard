@@ -47,7 +47,6 @@ body {
     width: 130px;
     margin-top: 10px;
     color: black;
-
 }
 
 .user-btn:hover {
@@ -81,7 +80,7 @@ a {
     background-color: rgba(245, 245, 245, 0.7);
 }
 
-/* content inside the instructions div*/
+/* text content inside the instructions div*/
 .instructions {
     padding: 5px;
 }
@@ -106,6 +105,10 @@ a {
     border: outset rgba(245, 245, 245, 0.7) 10px;
 }
 
+#label {
+    margin: 0 5%;
+    font-weight: 500;
+}
 /* START button shown only once form has been submitted */
 #start-quiz {
     display: none;
@@ -137,7 +140,6 @@ a {
     background-color: rgb(220, 128, 180);
     border: dotted black 8px;
     border-radius: 50%;
-
 }
 
 /* Div holding question */
@@ -179,7 +181,6 @@ a {
 /* answer button hover styling only for when in active state*/
 .btn-answer:hover:not([disabled]) {
     border: outset rgba(245, 245, 245, 0.7) 10px;
-
 }
 
 /* answer button when in disabled state */
@@ -207,7 +208,6 @@ a {
     border-radius: 10px;
     background-color: white;
     padding: 10px;
-
 }
 
 /* button styling, used to show leaderboard */
@@ -221,7 +221,6 @@ a {
     position: relative;
     top: 10px;
     display: none;
-
 }
 
 /* List items/ top ten scores shown on leaderboard */
@@ -229,7 +228,6 @@ a {
     margin: 0 auto;
     padding: 10px;
     text-align: left;
-
 }
 
 /* Div holding the buttons to navigate through the quiz( next, try again */
@@ -264,14 +262,12 @@ a {
         display: inline-block;
         text-align: center;
         margin: 0 auto;
-
     }
 
     /* increment incorrect score paragraph */
     #wrong-answer {
         padding-left: 10%;
     }
-
 }
 
 @media screen and (min-width: 930px) {
