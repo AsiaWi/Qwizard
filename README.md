@@ -7,7 +7,7 @@ Even though the quiz has some tricky questions, they are all simple and don't re
 ## FEATURES
 ### Main header
 * This is shown the same on every page for consistent design, it does change however to a personalised, welcome message as soon as user enters a username. Once user clicks 'start' located under the welcome message, the user is taken to a quiz and the header from that moment includes a link which user can use if they want to be taken back to home page/ instructions page.
-* When hovered over, the header will change the colour. Simple, not busy design, allowing the user to easily navigate back to the beggining.
+* When hovered over, the header will change the colour. Simple, not busy design, allows the user to easily navigate back to the beggining.
 ![main_header](assets/docs/main_header.png)
 ### Home page
 * The home page includes two features below the header.
@@ -23,7 +23,7 @@ Even though the quiz has some tricky questions, they are all simple and don't re
 ### Quiz page
 * Once user clicks the start button below previously seen welcome message, they will be taken to a quiz page.  Five features have been implemented here:
 #### Timer
-* Displayed at the top left close to the header. The aim of this feature is for the user to be able to track the time taken to answer the questions. This will not be shown in leaderboard but as the aim of the quiz is to answer the 10 questions correctly as quick as possible, each user can see the progress for themselves and see the total time taken to commplete quiz in final score message.
+* Displayed at the top left close to the header. The aim of this feature is for the user to be able to track the time taken to answer the questions. This will not be shown in leaderboard but as the aim of the quiz is to answer the 10 questions correctly as quick as possible, each user can see the progress for themselves and see the total time taken to complete quiz in final score message.
 ![quiz_page_timer](assets/docs/quiz_page_timer.png)
 #### Question displayed
 * The top of the page will display the question number followed by the question
@@ -103,6 +103,7 @@ Manual testing performed, to ensure website performs well on different browsers 
 * Devices
     * Iphone 13 Pro
     * Google Pixel 7 Pro 
+    * Motorola Edge 20
     * Surface Pro
     * Asus Vivobook
 
