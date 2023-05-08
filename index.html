@@ -20,11 +20,15 @@
 </head>
 
 <body>
+    <!-- main content container -->
     <div class="main-container">
+        <!-- header -->
         <header>
             <h1 class="quiz-header">Qwizard<br>
+                <!-- span will display welcome message once user enters username -->
                 <span id="name"></span></h1>
         </header>
+        <!-- container holding instructions paragraph and a list -->
         <div id="instructions-container">
             <h2 class="instructions">Instructions:</h2>
             <p class="instructions"> Test your quick, logical thinking!
@@ -37,15 +41,18 @@
                 <li>So... when you ready!</li>
             </ul>
         </div>
+        <!-- container holding text input for username -->
         <div id="form-container">
             <form method="POST">
                 <label for="username" id="label">Username:</label>
                 <br>
                 <input type="text" id="username" name="user-name" placeholder="Type your name here!" required>
             </form>
+            <!-- submit username and proceeds to show welcome message and start button once submitted -->
             <button id="submit-username" class="user-btn">SUBMIT</button>
             <a href="quiz.html" id="start-quiz" aria-label="Start quiz!" title="Start now!" class="user-btn">START!</a>
         </div>
+        <!-- Java script code -->
         <script src="assets/js/username.js"></script>
     </div>
 </body>
