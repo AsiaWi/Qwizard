@@ -222,32 +222,30 @@ footer a {
     background-color: #ff721e;
 }
 
-/* styling for main container shown only when a function to show leaderboard get's called */
+/* styling for leaderboard container shown only when a function to show leaderboard get's called */
 #highscore-container {
-    border: solid white 2px;
     height: fit-content;
-    width: 50%;
+    width: fit-content;
     display: none;
     margin: 10px auto;
-    border-radius: 10px;
-    background-color: white;
-    padding: 10px;
 }
 
-/* button styling, used to show leaderboard */
+/* button, used to show leaderboard */
 #leaderboard {
-    text-align: center;
-    background-color: rgba(245, 245, 245, 0.7);
-    width: 90%;
+    display: none;
+}
+/* ol styling for showleaderboard function */
+#highscore-list {
+    border: solid white 2px;
     height: fit-content;
+    width: fit-content;
     margin: 0 auto;
     border-radius: 10px;
-    position: relative;
-    top: 10px;
+    background-color: rgba(245, 245, 245, 0.7);
     display: none;
 }
 
-/* List items/ top ten scores shown on leaderboard */
+/* List items/ top 5 scores shown on leaderboard */
 #highscore-list li {
     margin: 0 auto;
     padding: 10px;

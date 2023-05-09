@@ -190,7 +190,7 @@ async function loadQuestions() {
     document.getElementById("add-incorrect-score").innerText = ++incorrectScore;
   }
 
-  // FOLLOWING FUNCTIONS/CODE DEALS WITH TOTAL SCORE PAGE AND LEADERBOARD
+  // FOLLOWING FUNCTIONS/CODE, DEALS WITH TOTAL SCORE PAGE AND LEADERBOARD
 
   /* for help with building a leaderboard I have used:
   https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
@@ -200,14 +200,19 @@ async function loadQuestions() {
   */
 
 
-  //add event listener for the button encouraging user to view leaderboard.The button will call the showLeaderBoard function
-  /*checkLeaderBoard.addEventListener('click', showLeaderBoard);*/
+  //add event listener for the button to view leaderboard.The button will call the showLeaderBoard function
+  
+  let showBoard = false;
 
   checkLeaderBoard.addEventListener('click', () => {
-    if (showLeaderBoard() === false) {
+    if (showBoard === false) {
+      document.getElementById('highscore-list').style.display = 'block';
       showLeaderBoard();
-    } else if (showLeaderBoard() === true) {
-      showTotalScore();
+      showBoard = true;
+    } else {
+      document.getElementById('highscore-list').style.display = 'none';
+      checkLeaderBoard.innerHTML = 'Leaderboard'
+      showBoard = false;
     }
   });
 
@@ -224,7 +229,7 @@ async function loadQuestions() {
     let correctScore = document.getElementById('add-correct-score').innerHTML;
     localStorage.setItem('correctScore', correctScore);
     let username = localStorage.getItem('name');
-    questionHeader.innerHTML = ` ${username} you answered correctly ${correctScore} out of ${newQuestions.length} questions in ${min} min : ${sec} sec!`;
+    questionHeader.innerHTML = ` ${username} you answered correctly ${correctScore} out of ${newQuestions.length} questions in ${min} min : ${sec} sec's!`;
     nextQuestion.innerHTML = 'Try again!';
     nextQuestion.style.display = 'block';
     document.getElementById('add-correct-score').innerHTML = 0;
@@ -241,31 +246,18 @@ async function loadQuestions() {
    * it sets the div and the button held within the div from display='none' to display='block'
    * as the add event listener has been set above, it means that if user clicks on the button
    * it will show the leaderboard by calling showLeaderBoard function.
-   * If user doesn't want to view it they will still have an option of clicking 'try again' from previous function
+   * If user doesn't want to view it they will still have an option of clicking 'try again'
    */
   function leaderBoardButton() {
     checkLeaderBoard.style.display = 'block';
     leaderBoard.style.display = 'block';
   }
   /**
-   * please note I have added the same comments against most of the lines of code for this function, for ease of understanding
-   * This function will show the username and total score from local storage
-   * changing the heading of the leaderboard once user clicks on the button to open as per previous function
-   * getting and displying a list which will later hold usernames and scores
-   * getting username from local storage, previously stored with setItem
-   * getting total correct score from local storage
-   * getting high scores from local storage, if nothing to return it has an option of displaying empty array instead:
-   * score object, creating an array
-   * from highest to lowest score
-   * and getting first 10 items
-   * setting previously called list into HTML
-   * iterating through the score object and returning <li> element for each
-   * map method allows us to convert the array into list element with the help of template literal
-   * the empty join string will convert the returned array back into a string
-   * 
+   * Function getting scores and username from local storage 
+   * then displaying it as a list of top 5
    */
   function showLeaderBoard() {
-    checkLeaderBoard.innerHTML = 'WIZARDS:'; //changing the heading of the leaderboard once user clicks on the button to open as per previous function
+    checkLeaderBoard.innerHTML = 'Collapse board:';//changing the heading of the leaderboard once user clicks on the button to open as per previous function
     let highScoresList = document.getElementById('highscore-list'); //getting and displying a list which will later hold usernames and scores
     highScoresList.style.display = 'block';
     const username = localStorage.getItem('name'); //getting username from local storage, previously stored with setItem
@@ -277,7 +269,7 @@ async function loadQuestions() {
     }; //score object, creating an array 
     highScores.push(score);
     highScores.sort((a, b) => b.score - a.score); //from highest to lowest
-    highScores.splice(10); //and getting first 10 items 
+    highScores.splice(5); //and getting first 5 items 
     localStorage.setItem('highScores', JSON.stringify((highScores)));
     //setting previously called list into HTML
     highScoresList.innerHTML = highScores //iterating through the score object and returning <li> element for each
@@ -290,5 +282,4 @@ async function loadQuestions() {
 
 
   runGame();
-  console.log(JSON.parse(questions));
 })();
