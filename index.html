@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <!-- main content container -->
+    <!-- All content container -->
     <div class="main-container">
         <!-- header -->
         <header>
@@ -31,32 +31,34 @@
                 <span id="name"></span></h1>
         </header>
         <main>
-        <!-- container holding instructions paragraph and a list -->
-        <div id="instructions-container">
-            <h2 class="instructions">Instructions:</h2>
-            <p class="instructions"> Test your quick, logical thinking!
-                <br> The aim of the quiz is to answer 10 simple but tricky questions, as quick as you can!</p>
-            <ul>
-                <li>You can only select one answer </li>
-                <li>Once selected, click 'NEXT' to go to next question</li>
-                <li>Enter your name below</li>
-                <li>The timer starts as soon as you click 'START"</li>
-                <li>So... when you ready!</li>
-            </ul>
-        </div>
-        <!-- container holding text input for username -->
-        <div id="form-container">
-            <form method="POST">
-                <label for="username" id="label">Username:</label>
-                <br>
-                <input type="text" id="username" name="user-name" placeholder="Type your name here!" required>
-            </form>
-            <!-- submit username and proceeds to show welcome message and start button once submitted -->
-            <button id="submit-username" class="user-btn">SUBMIT</button>
-            <a href="quiz.html" id="start-quiz" aria-label="Start quiz!" title="Start now!" class="user-btn">START!</a>
-        </div>
+            <!-- container holding instructions paragraph and a list -->
+            <div id="instructions-container">
+                <h2 class="instructions">Instructions:</h2>
+                <p class="instructions"> Test your quick, logical thinking!
+                    <br> The aim of the quiz is to answer 10 simple but tricky questions, as quick as you can!</p>
+                <ul>
+                    <li>You can only select one answer </li>
+                    <li>Once selected, click 'NEXT' to go to next question</li>
+                    <li>Enter your name below</li>
+                    <li>The timer starts as soon as you click 'START"</li>
+                    <li>So... when you ready!</li>
+                </ul>
+            </div>
+            <!-- container holding text input for username -->
+            <div id="form-container">
+                <form method="POST">
+                    <label for="username" id="label">Username:</label>
+                    <br>
+                    <input type="text" id="username" name="user-name" placeholder="Type your name here!" required>
+                </form>
+                <!-- submit username and proceeds to show welcome message and start button once submitted -->
+                <button id="submit-username" class="user-btn">SUBMIT</button>
+                <a href="quiz.html" id="start-quiz" aria-label="Start quiz!" title="Start now!"
+                    class="user-btn">START!</a>
+            </div>
         </main>
-    </div>    
+    </div>
+    <!-- footer -->
     <footer>
         <ul>
             <li>
@@ -65,16 +67,15 @@
                     <i class="fa-brands fa-github"></i></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/joanna-witek-51017b263" id="linkedin" target="_blank" title="Opens in new tab"
-                    aria-label="Go to my Linkedin!(Link opens in new tab)">
+                <a href="https://www.linkedin.com/in/joanna-witek-51017b263" id="linkedin" target="_blank"
+                    title="Opens in new tab" aria-label="Go to my Linkedin!(Link opens in new tab)">
                     <i class="fa-brands fa-linkedin"></i></a>
-                
             </li>
         </ul>
-    </footer>    
-        <!-- Java script code -->
-        <script src="assets/js/username.js"></script>
-        <noscript>Sorry your browser does not support JavaScript!</noscript>      
+    </footer>
+    <!-- Java script code -->
+    <script src="assets/js/username.js"></script>
+    <noscript>Sorry your browser does not support JavaScript!</noscript>
 </body>
 
 </html>

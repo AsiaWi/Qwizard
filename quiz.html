@@ -22,41 +22,46 @@
 </head>
 
 <body>
-    <!-- Main content container -->
+    <!-- All content container -->
     <div class="main-container">
         <!-- Timer shown in top left corner of the main container -->
         <span id="timer">0</span>
         <!-- Main header incl. anchor link to easily navigate back to index page -->
-        <a href="index.html" aria-label="Go back to our instructions page!" title="Jump back to instructions page!">
-            <h1 class="quiz-header" id="quiz-header">Qwizard</h1>
-        </a>
-        <!-- container holding the question -->
-        <div id="question-area">
-            <h2 id="question-header">1.Question</h2>
-        </div>
-        <!-- container holding the answers -->
-        <div id="answer-area">
-            <!-- 3 answer options as button elements will display here via JS -->
-        </div>
-        <!-- this container will be displayed only once user reached the total score page/ using JS -->
-        <div id="highscore-container">
-            <!-- button to access the list of top scores in form of leaderboard -->
-            <button id="leaderboard" class="user-btn">You can check here to see if you made it to the
-                Leaderboard!</button>
-            <ol id="highscore-list">
-                <!-- <li> elements will be displayed here with JS/ showLeaderBoard function -->
-            </ol>
-        </div>
-        <!-- container holding buttons to navigate through the page/ next button -> try again -->
-        <div id="navigation-area">
-            <button class="user-btn" id="next-btn">Next question</button>
-        </div>
-        <!-- container holding the increment correct and incorrect score  -->
-        <div id="score-area">
-            <p class="answer-count">Correct Answers:<span id="add-correct-score">0</span></p>
-            <p class="answer-count" id="wrong-answer">Incorrect Answers:<span id='add-incorrect-score'>0</span></p>
-        </div>
+        <header>
+            <a href="index.html" aria-label="Go back to our instructions page!" title="Jump back to instructions page!">
+                <h1 class="quiz-header" id="quiz-header">Qwizard</h1>
+            </a>
+        </header>
+        <main>
+            <!-- container holding the question -->
+            <div id="question-area">
+                <h2 id="question-header">1.Question</h2>
+            </div>
+            <!-- container holding the answers -->
+            <div id="answer-area">
+                <!-- 3 answer options as button elements will display here via JS -->
+            </div>
+            <!-- this container will be displayed only once user reached the total score page/ using JS -->
+            <div id="highscore-container">
+                <!-- button to access the list of top scores in form of leaderboard -->
+                <button id="leaderboard" class="user-btn">You can check here to see if you made it to the
+                    Leaderboard!</button>
+                <ol id="highscore-list">
+                    <!-- <li> elements will be displayed here with JS/ showLeaderBoard function -->
+                </ol>
+            </div>
+            <!-- container holding buttons to navigate through the page/ next button -> try again -->
+            <div id="navigation-area">
+                <button class="user-btn" id="next-btn">Next question</button>
+            </div>
+            <!-- container holding the increment correct and incorrect score  -->
+            <div id="score-area">
+                <p class="answer-count">Correct Answers:<span id="add-correct-score">0</span></p>
+                <p class="answer-count" id="wrong-answer">Incorrect Answers:<span id='add-incorrect-score'>0</span></p>
+            </div>
+        </main>
     </div>
+    <!-- footer -->
     <footer>
         <ul>
             <li>
@@ -65,15 +70,15 @@
                     <i class="fa-brands fa-github"></i></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/joanna-witek-51017b263" id="linkedin" target="_blank" title="Opens in new tab"
-                    aria-label="Go to my Linkedin!(Link opens in new tab)">
+                <a href="https://www.linkedin.com/in/joanna-witek-51017b263" id="linkedin" target="_blank"
+                    title="Opens in new tab" aria-label="Go to my Linkedin!(Link opens in new tab)">
                     <i class="fa-brands fa-linkedin"></i></a>
-                
             </li>
         </ul>
-    </footer> 
+    </footer>
     <!-- js code -->
     <script type="module" src="assets/js/script.js"></script>
+    <noscript>Sorry your browser does not support JavaScript!</noscript>
 </body>
 
 </html>

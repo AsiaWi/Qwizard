@@ -59,7 +59,7 @@ a {
     color: black;
 }
 
-/* fiiter styling */
+/* footer styling */
 footer ul {
     text-align: center;
     margin-top: 5%;
@@ -79,7 +79,6 @@ footer li {
 }
 
 footer a {
-    color: black;
     font-size: 300%;
 }
 
@@ -133,6 +132,7 @@ footer a {
     margin: 0 5%;
     font-weight: 500;
 }
+
 /* START button shown only once form has been submitted */
 #start-quiz {
     display: none;
