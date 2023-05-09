@@ -37,7 +37,7 @@ async function loadQuestions() {
    * for the player to see how long it took to take the quiz
    * function called soon as user clicks START button
    * interval called every 1000miliseconds / every sec
-   * then when sec = 60, the fucntion will add a minute and start sec again
+   * then when sec = 60, the function will add a minute and start sec again
    */
 
   //https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz used for help with building the timer.
@@ -201,7 +201,7 @@ async function loadQuestions() {
   */
 
 
-  //add event listener for the button to view leaderboard.The button will call the showLeaderBoard function
+  //add event listener for the button to view leaderboard
 
   let showBoard = false;
 
@@ -223,7 +223,7 @@ async function loadQuestions() {
    * question header will now be set as a message including the username correct score and time taken to complete quiz
    * timer (min and sec) and incremented scores will be set back to zero
    * next button will be displayed and set to try again which will take a user back to rungame
-   * leaderBoardButton function will be called
+   * showLeaderBoard function will be called
    */
   function showTotalScore() {
     initialState();
@@ -238,27 +238,16 @@ async function loadQuestions() {
     document.getElementById('score-area').style.display = 'none';
     sec = 0;
     min = 0;
-    leaderBoardButton();
     showLeaderBoard();
   }
 
-  /**
-   * This function although very simple,
-   *  helps with giving the user an option of viewing leaderboard if they want to
-   * it sets the div and the button held within the div from display='none' to display='block'
-   * as the add event listener has been set above, it means that if user clicks on the button
-   * it will show the leaderboard by calling showLeaderBoard function.
-   * If user doesn't want to view it they will still have an option of clicking 'try again'
-   */
-  function leaderBoardButton() {
-    checkLeaderBoard.style.display = 'block';
-    leaderBoard.style.display = 'block';
-  }
   /**
    * Function getting scores and username from local storage 
    * then displaying it as a list of top 5
    */
   function showLeaderBoard() {
+    checkLeaderBoard.style.display = 'block';
+    leaderBoard.style.display = 'block';
     let highScoresList = document.getElementById('highscore-list'); //getting and displying a list which will later hold usernames and scores
     const username = localStorage.getItem('name'); //getting username from local storage, previously stored with setItem
     const correctScore = localStorage.getItem('correctScore'); //getting total correct score from local storage.
