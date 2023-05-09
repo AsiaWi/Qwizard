@@ -6,8 +6,8 @@ Even though the quiz has some tricky questions, they are all simple and don't re
 
 ## FEATURES
 ### Main header
-* This is shown the same on every page for consistent design, it does change however to a personalised, welcome message as soon as user enters a username. Once user clicks 'start' located under the welcome message, the user is taken to a quiz and the header from that moment includes a link which user can use if they want to be taken back to home page/ instructions page.
-* When hovered over, the header will change the colour. Simple, not busy design, allows the user to easily navigate back to the beggining.
+* This is shown the same on every page for consistent design, once quiz starts,mthe header includes a link which user can use if they want to be taken back to home page/ instructions page.
+* When hovered over, the header will change the colour, so that the user is aware of the link. Simple, not busy design, allows the user to easily navigate back to the beggining.
 ![main_header](assets/docs/main_header.png)
 ### Home page
 * The home page includes two features below the header.
@@ -39,6 +39,10 @@ Even though the quiz has some tricky questions, they are all simple and don't re
 #### Incremented score count display
 * This feature is displayed below the next button. The aim of this is so that a user can keep track of the progress throughout the game.
 ![quiz_page_increment_score](assets/docs/quiz_page_increment_score.png)
+### Footer
+* Each page has a footer below the main game content, the footer displays icon links to Github and Linkedin accounts
+* As the website is educational, the aim of these is so that a user can see my Github work and the Linkedin account if they wish to know more about me
+![footer](assets/docs/footer.png)
 ### 404 ERROR PAGE NOT FOUND
 * This page will show for a user if wrong link for the page is entered. 
 * The benefit of the page is that customer get's clear message with a link to go back to home page so that they can start from begging. User won't have to use browsers back button.
@@ -50,6 +54,7 @@ Even though the quiz has some tricky questions, they are all simple and don't re
 
 ## DESIGN
 * small to large screen wireframe ( quiz will look the same across all screen sizes. There will be slight difference in displaying incremented score count but still can be found under the answers)
+* Please note the footer has been added to each page right below the largest div, footer includes two icon links (github and linkedin)
      * Home page
              ![home_page](assets/docs/home_page_wireframe.png)
      * this will be amended to welcome message with JS once user clicks 'submit' button
@@ -120,28 +125,52 @@ Manual testing performed, to ensure website performs well on different browsers 
 ![quiz_page_mobile](assets/docs/lighthouse_quiz_page_mobile.png)
 
 ### Functional Testing
-* Navigation link
-    * Link has been checked. Works as expected.
 
-|NAVIGATION LINK      | DESTINATION PAGE|
-|---------------------|-----------------|
-|Quiz page/ header    | index.html      |
-
-
-* Buttons
+* Buttons and anchor links
     * All checked and work as expected
 
-|Button/ anchor link (location)                        | DESTINATION PAGE                      | PAGE OPENS IN NEW TAB       |
-|------------------------------------------------------|---------------------------------------|-----------------------------|
-|'Submit'(home page/below username input)              | index.html/welcome msg                | no- as expected             |
-|'START'(home page/displayed after clicking submit)    | quiz.html/1st question displayed      | no- as expected             |
-|'Next' (displayed once answer is selected)            | quiz.html/next question selected      | no- as expected             |
-|'Try again'(quiz.html/displayed below final score)    | quiz.html/1st question displayed      | no- as expected             |
-|'leaderboard'(quiz.html/displayed below final score)  | quiz.html/leaderboard list displayed  | no- as expected             |
+|Button/ anchor link (location)                        | DESTINATION PAGE                                   | PAGE OPENS IN NEW TAB       |
+|------------------------------------------------------|----------------------------------------------------|-----------------------------|
+|'Submit'(home page/below username input)              | index.html/welcome msg                             | no- as expected             |
+|'START'(home page/displayed after clicking submit)    | quiz.html/1st question displayed                   | no- as expected             |
+|'Next' (displayed once answer is selected)            | quiz.html/next question selected                   | no- as expected             |
+|'Try again'(quiz.html/displayed below final score)    | quiz.html/1st question displayed                   | no- as expected             |
+|'leaderboard'(quiz.html/displayed below final score)  | quiz.html/leaderboard list displayed               | no- as expected             |
+|Quiz page link (within header)                        | index.html                                         | no- as expected             |
+|'Github' icon(footer)                                 | https://github.com/AsiaWi                          | yes- as expected            |
+|'Linkedin' icon(footer)                               | https://www.linkedin.com/in/joanna-witek-51017b263/| yes- as expected            |
 
 
-* Input username - testing
-    * Input (type=text)- set as "required", user has to input the name, if user doesn't do it and clicks 'submit', an alert to enter username will be displayed
+
+* Functionality testing
+
+|   function/location          |            action                              |   expected                                                   |   actual                    |
+|------------------------------|------------------------------------------------|--------------------------------------------------------------|-----------------------------|
+|username input/ index.html    |user enters their name and clicks submit        | welcome message displays and an option to click 'start'      | as expected                 |
+|                              |                                                |                                                              |                             |
+|                              |user doesn't enter their name and clicks submit | alert displayed indicating to enter username                 | as expected                 |
+|                              |                                                |                                                              |                             |
+|start button/index.html       |user clicks start                               | user taken to a quiz.html page, quiz starts, timer starts    | as expected                 |
+|                              |                                                |                                                              |                             |
+|                              |                                                |                                                              |                             |
+|answer buttons/quiz.html      |user selected correct answer                    | button highlighted turquoise colour, other answer buttons    |                             |
+|                              |                                                |disabled, next button displayed,correct score incremented by 1| as expected                 |
+|                              |user selected incorrect answer                  |button highlighted burnt orange colour, correct answer shown  |                             |  
+|                              |                                                |in turquoise, all answer buttons disabled, next button        |                             |
+|                              |                                                |displayed, incorrect score incremented by 1                   | as expected                 |
+|next button/quiz.html         |user clicks next button                         |next question displayed, question number incremented by one   | as expected                 |
+|                              |user clicks next after answering question 10    |total score displayed (username and scores shown),            |                             |
+|                              |                                                |leaderboard and try again buttons shown                       | as expected                 |
+|                              |                                                |                                                              |                             |
+|leaderboard button/quiz.html  |user clicks the button once                     |top 5 scores shown as leaderboard, try again option still     |                             |
+|                              |                                                |available for user if they want to play again                 | as expected                 |
+|                              |user clicks the button 2nd time                 |leaderboard collapses, only leaderboard button shown,         |                             |
+|                              |                                                |try again button shown below                                  | as expected                 |
+|                              |                                                |                                                              |                             |
+|try again button/quiz.html    |user clicks the button                          |quiz starts again, question no.1 displayed                    |                             |
+|                              |                                                |timer starts from 0                                           | as expected                 |
+
+
 
 ### Validator testing
 * HTML
@@ -152,7 +181,10 @@ No errors were found when passing through the official Jigsaw W3 Validator
 ![CSS-validator](assets/docs/css_validator.png)
 * JAVA SCRIPT
 No errors were found when passing through the jshint validator. (https://jshint.com/)
-### Unfixed bugs
+  * script.js validated:
+![JS-validator](assets/docs/jshint_script_js.png)
+  * username.js validated:
+![JS-validator](assets/docs/jshint_username_js.png)
 
 
 ## Version Control
