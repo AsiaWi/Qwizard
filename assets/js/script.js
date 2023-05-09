@@ -4,6 +4,7 @@
 https://www.youtube.com/watch?v=PBcqGxrr9g8
 as a base for the quiz
 */
+
 //add to load questions from json file
 async function loadQuestions() {
   let response = await fetch("./assets/js/questions.json");
@@ -14,9 +15,6 @@ async function loadQuestions() {
 //Wrapped entire code in an async function,to be able to use 'await' to load the questions
 (async () => {
   let questions = await loadQuestions();
-
-
-
 
   // Global variables, list
   let newQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10); // shuffles question array and picks first 10 items from it.
@@ -39,10 +37,8 @@ async function loadQuestions() {
    * interval called every 1000miliseconds / every sec
    * then when sec = 60, the function will add a minute and start sec again
    */
-
   //https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz used for help with building the timer.
   //last example, reversed and counted up rather than count-down
-
   function showTimer(time) {
     document.getElementById('timer').innerHTML = `${min} : ${sec}`;
     if (currentQuestionIndex < newQuestions.length) {
@@ -55,6 +51,7 @@ async function loadQuestions() {
       min++;
     }
   }
+
   /**
    * Main function called as soon as user clicks on START button from index page
    * starts of with question index 0
@@ -80,6 +77,7 @@ async function loadQuestions() {
       answerArea.removeChild(answerArea.firstChild);
     }
   }
+
   /**
    * Function showing question and question number in header/ question area 
    * remove next button before answer is selected
@@ -181,6 +179,7 @@ async function loadQuestions() {
     let correctScore = parseInt(document.getElementById("add-correct-score").innerText);
     document.getElementById("add-correct-score").innerText = ++correctScore;
   }
+
   //for both increment functions I have used love maths project for help
   /**
    * incrementing the number of incorrectly answered questions
@@ -200,9 +199,7 @@ async function loadQuestions() {
   (videos7,8,9)
   */
 
-
   //add event listener for the button to view leaderboard
-
   let showBoard = false;
 
   checkLeaderBoard.addEventListener('click', () => {
@@ -267,8 +264,6 @@ async function loadQuestions() {
       })
       .join(''); //the empty join string will convert the returned array back into a string
   }
-
-
 
   runGame();
 })();
