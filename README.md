@@ -256,6 +256,7 @@ The site was deployed to GitHub Pages.
 * base of the quiz taken from the tutorial: https://www.youtube.com/watch?v=PBcqGxrr9g8
 * idea of how the quiz would look like taken from https://github.com/Mrst12/Quizzical
 * google fonts
+* https://fontawesome.com/ for icons used within footer
 * background Image by Freepik:
     <a href="https://www.freepik.com/free-vector/hand-drawn-abstract-doodle-pattern_22339896.htm#query=background%20doodle&position=25&from_view=search&track=ais">Freepik</a>
 * questions taken from: 
