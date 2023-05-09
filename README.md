@@ -94,7 +94,7 @@ Each page checked with the help of WAVE Accessibility tool (https://wave.webaim.
 * alternative text as a function for screen readers or in events when images don't load
 * structural elements - for users of assistive technology as well as visual and semantic meaning
 * language of the document- for screen readers
-
+* an alert coming up due to noscript tag, however as it doesn't come up as an error, I have left it in
 ### Manual Testing
 Manual testing performed, to ensure website performs well on different browsers and devices.
 * Browsers
