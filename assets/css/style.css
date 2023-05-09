@@ -59,6 +59,30 @@ a {
     color: black;
 }
 
+/* fiiter styling */
+footer ul {
+    text-align: center;
+    margin-top: 5%;
+    padding: 0;
+    background-color: #f0e3e0;
+    margin: 5% auto;
+    background-color: rgb(186, 179, 236);
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
+footer li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 5%;
+}
+
+footer a {
+    color: black;
+    font-size: 300%;
+}
+
 /* INDEX PAGE STYLING */
 
 /* styling to show username inputted by the player, then shown below main header */
