@@ -208,7 +208,7 @@ async function loadQuestions() {
   checkLeaderBoard.addEventListener('click', () => {
     if (showBoard === false) {
       document.getElementById('highscore-list').style.display = 'block';
-      showLeaderBoard();
+      checkLeaderBoard.innerHTML = 'Collapse board:';
       showBoard = true;
     } else {
       document.getElementById('highscore-list').style.display = 'none';
@@ -239,6 +239,7 @@ async function loadQuestions() {
     sec = 0;
     min = 0;
     leaderBoardButton();
+    showLeaderBoard();
   }
 
   /**
@@ -258,9 +259,7 @@ async function loadQuestions() {
    * then displaying it as a list of top 5
    */
   function showLeaderBoard() {
-    checkLeaderBoard.innerHTML = 'Collapse board:'; //changing the heading of the leaderboard once user clicks on the button to open as per previous function
     let highScoresList = document.getElementById('highscore-list'); //getting and displying a list which will later hold usernames and scores
-    highScoresList.style.display = 'block';
     const username = localStorage.getItem('name'); //getting username from local storage, previously stored with setItem
     const correctScore = localStorage.getItem('correctScore'); //getting total correct score from local storage.
     const highScores = JSON.parse(localStorage.getItem('highScores')) || []; // getting high scores from local storage, if nothing to return it has an option of displaying empty array instead:
