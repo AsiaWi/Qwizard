@@ -67,6 +67,7 @@ async function loadQuestions() {
     leaderBoard.style.display = 'none';
     document.getElementById('score-area').style.display = 'block';
     nextQuestion.innerHTML = 'NEXT';
+    showTimer(time);
     showQuestion();
   }
 
@@ -201,7 +202,7 @@ async function loadQuestions() {
 
 
   //add event listener for the button to view leaderboard.The button will call the showLeaderBoard function
-  
+
   let showBoard = false;
 
   checkLeaderBoard.addEventListener('click', () => {
@@ -211,7 +212,7 @@ async function loadQuestions() {
       showBoard = true;
     } else {
       document.getElementById('highscore-list').style.display = 'none';
-      checkLeaderBoard.innerHTML = 'Leaderboard'
+      checkLeaderBoard.innerHTML = 'Leaderboard';
       showBoard = false;
     }
   });
@@ -257,7 +258,7 @@ async function loadQuestions() {
    * then displaying it as a list of top 5
    */
   function showLeaderBoard() {
-    checkLeaderBoard.innerHTML = 'Collapse board:';//changing the heading of the leaderboard once user clicks on the button to open as per previous function
+    checkLeaderBoard.innerHTML = 'Collapse board:'; //changing the heading of the leaderboard once user clicks on the button to open as per previous function
     let highScoresList = document.getElementById('highscore-list'); //getting and displying a list which will later hold usernames and scores
     highScoresList.style.display = 'block';
     const username = localStorage.getItem('name'); //getting username from local storage, previously stored with setItem
